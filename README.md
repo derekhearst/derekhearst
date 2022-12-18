@@ -31,7 +31,7 @@ Hello, my name is derek, and i've been developing software for the past 6 years.
 <hr/>
 
 <a href="https://github.com/derekhearst">
-<img align="center" src="https://github-readme-stats.vercel.app/api?username=derekhearst&theme=transparent&hide_border=true&title_color=9EE61F&text_color=ffffff&show_icons=true&icon_color=9EE61F&text_bold=false" width=350 />  
+<img align="center" src="https://github-readme-stats.vercel.app/api?username=derekhearst&theme=transparent&hide_border=true&title_color=9EE61F&text_color=ffffff&show_icons=true&icon_color=9EE61F&text_bold=false" width=400 />  
 </a>
   
 <a href="https://github.com/derekhearst">
