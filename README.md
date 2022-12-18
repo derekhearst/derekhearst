@@ -2,9 +2,7 @@
 <h4 align=center> A Full Stack Software Developer @ <a href="https://derekhearst.com">www.derekhearst.com</a> </h4>
 
 
-Hello, my name is Derek Hearst, and i've been developing software for the past 6 years. I'm currently proficent with C#, Javascript and Typescript 
-
-Web Development a passion of mine, my tech stack is SvelteKit + Tailwindcss + Cloudflare Workers.
+I've been programming for the past 7 years, I started with Lua in garrys mod when I was a kid, quickly learning I loved writing code. I'm currently proficent with C#, Javascript and Typescript. Web Development is a passion of mine, and my tech stack is SvelteKit + Tailwindcss + Cloudflare Workers.
 
 
 
