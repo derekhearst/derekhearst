@@ -12,6 +12,6 @@ Hello, my name is derek, and i've been developing software for the past 6 years.
 [<img src="https://vitejs.dev/logo-with-shadow.png" alt="vite" width=100/>](https://derekhearst.com)
 
 
-[![Derek's GitHub stats](https://github-readme-stats.vercel.app/api?username=derekhearst)](https://github.com/derekhearst)
+[![Derek's GitHub stats](https://github-readme-stats.vercel.app/api?username=derekhearst&theme=transparent&hide_border=true)](https://github.com/derekhearst)
 
 
