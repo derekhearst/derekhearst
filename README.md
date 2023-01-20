@@ -1,8 +1,8 @@
 <h1 align=center> Hello, I'm Derek Hearst </h1>
 <h4 align=center> Passionate Web Developer <a href="https://derekhearst.com">www.derekhearst.com</a> </h4>
 
-
-I've been programming for the past 7 years, I started with Lua in garrys mod when I was a kid, quickly learning I loved writing code. I'm currently proficent with C#, Javascript and Typescript. Web Development is a passion of mine, and my tech stack is SvelteKit + Tailwindcss + Cloudflare Workers.
+Hello, my name is Derek Hearst, I'm a Full Stack Web Developer that's passionate about UX design. My interest in development started with game modding with Lua, leading me to web development and full stack development. I'm proficient with web technologies like vue, sveltekit, express.js, asp.net, and serverless computing. 
+Check out my website for more information
 
 
 
