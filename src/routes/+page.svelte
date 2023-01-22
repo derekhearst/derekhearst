@@ -34,7 +34,7 @@
 	<h3 class="font-mono text-5xl font-bold">About me</h3>
 	<div class="flex flex-col max-w-5xl gap-8 text-xl">
 		<p>My interest in development started with game modding with Lua, leading me to web development and full stack development. I enjoy learning new technologies and creating projects with them.</p>
-		<p>In the past i owned and operated ChronoGaming, a online gaming community with servers that I created custom content for.</p>
+		<p>In the past I owned and operated ChronoGaming, a online gaming community with servers that I created custom content for.</p>
 	</div>
 
 	<p class="text-xl text-white/70">My frontend technologies include JavaScript, TypeScript, Svelte, Vue, Tailwind CSS, and Bootstrap.</p>
