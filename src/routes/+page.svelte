@@ -12,8 +12,6 @@
 <header class="flex flex-col flex-wrap items-center justify-center gap-6 p-3 py-3 font-mono text-3xl text-center bg-zinc-900 text-lime-400 sm:py-5 sm:flex-row sm:justify-start ">
 	<h1 class="text-6xl font-bold">Derek Hearst</h1>
 	<nav class="flex flex-wrap items-center justify-center gap-6 text-white underline">
-		<a href="/">Home</a>
-		<a href="#aboutme">About</a>
 		<a href="#projects">Projects</a>
 		<a href="https://github.com/derekhearst" target="_blank" rel="noreferrer">GitHub</a>
 		<a href="https://www.linkedin.com/in/derekhearst/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -34,35 +32,20 @@
 	<h3 class="font-mono text-5xl font-bold">About me</h3>
 	<div class="flex flex-col max-w-5xl gap-8 text-xl">
 		<p>My interest in development started with game modding with Lua, leading me to web development and full stack development. I enjoy learning new technologies and creating projects with them.</p>
-		<p>In the past I owned and operated ChronoGaming, a online gaming community with servers that I created custom content for.</p>
+		<p>Owned and operated ChronoGaming, a online gaming community with servers that I created custom content for.</p>
 	</div>
 
-	<p class="text-xl text-white/70">My frontend technologies include JavaScript, TypeScript, Svelte, Vue, Tailwind CSS, and Bootstrap.</p>
+	<p class="text-xl text-white/70">My front-end technologies include JavaScript, TypeScript, Svelte, Vue, Tailwind CSS, and Bootstrap.</p>
 	<div class="flex flex-wrap items-center justify-center w-full gap-5">
-		<a href="https://github.com/derekhearst">
-			<img src="https://cdn.cdnlogo.com/logos/t/96/typescript.svg" width="80" alt="typescript" />
-		</a>
-
-		<a href="https://github.com/derekhearst">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png?20120221235433" alt="javascript" width="80" />
-		</a>
-		<a href="https://github.com/derekhearst">
-			<img src="https://cdn.cdnlogo.com/logos/s/6/svelte.svg" alt="svelte" width="80" />
-		</a>
-		<a href="https://github.com/derekhearst">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png" alt="vue" width="80" />
-		</a>
-
-		<a href="https://github.com/derekhearst">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" alt="tailwin" width="80" />
-		</a>
-
-		<a href="https://github.com/derekhearst">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="bootstrap" width="80" />
-		</a>
+		<img src="https://cdn.cdnlogo.com/logos/t/96/typescript.svg" width="80" alt="typescript" />
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png?20120221235433" alt="javascript" width="80" />
+		<img src="https://cdn.cdnlogo.com/logos/s/6/svelte.svg" alt="svelte" width="80" />
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png" alt="vue" width="80" />
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" alt="tailwin" width="80" />
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="bootstrap" width="80" />
 	</div>
 
-	<p class="text-xl text-white/70">My backend technologies includes Node.js, Express, MongoDB, SQL, C#, and ASP.NET .</p>
+	<p class="text-xl text-white/70">My back-end technologies includes Node.js, Express, MongoDB, SQL, C#, and ASP.NET .</p>
 	<div class="flex flex-wrap items-center justify-center w-full gap-5">
 		<img src="https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg" width="80" alt="nodejs" />
 		<img src="https://cdn.cdnlogo.com/logos/m/30/mongodb-icon.svg" width="80" alt="mongodb" />
@@ -80,6 +63,9 @@
 			<a href="https://movieknight.uk" target="_blank" class="text-xl underline text-lime-400" rel="noreferrer">https://movieknight.uk</a>
 		</div>
 		<p class="text-xl">The movie knight platform enables users are able to browse through a selection of popular and classic films, select a movie to watch at a specific date and time, and invite their friends to join them. They are also be able to create watch lists of movies they want to see and share these lists with their friends, allowing them to easily plan future movie nights and discover new films to watch together.</p>
+		<p class="text-xl">The platform is built using the MEVN stack, with the front-end built using Vue and the back-end built using Node.js and Express.</p>
+		<p class="text-xl">The back-end is hosted on render and MongoDB Atlas, while the frontend is Hosted with cloudflare Pages.</p>
+		<p class="text-xl">This project was a group effort, and the links to my co-developers github pages can be found in the footer.</p>
 	</article>
 
 	<article />
