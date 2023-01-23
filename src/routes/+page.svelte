@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<meta name="description" content="Hi, my name is derek. I'm a full stack web developer with passion for learning new technologies. This site contains some of the projects I've created." />
+	<meta name="description" content="Hi, my name is Derek Hearst. I'm a full stack web developer with passion for learning new technologies. This site contains some of the projects I've created." />
 	<meta name="keywords" content="Svelte, Portfolio, Derek, Derek Hearst, Web Developer, Software Developer" />
 	<meta name="author" content="Derek Hearst" />
 	<title>Derek Hearst</title>
