@@ -1,5 +1,4 @@
 <script>
-	import ProfilePic from '$lib/images/profile.jpg';
 </script>
 
 <svelte:head>
@@ -16,7 +15,7 @@
 		<a href="https://github.com/derekhearst" target="_blank" rel="noreferrer">GitHub</a>
 		<a href="https://www.linkedin.com/in/derekhearst/" target="_blank" rel="noreferrer">LinkedIn</a>
 	</nav>
-	<img src={ProfilePic} alt="Derek Hearst" class="block rounded-full w-52 -mb-28 sm:mb-0 sm:ml-auto sm:hidden" />
+	<img src="/profile.jpg" alt="Derek Hearst" class="block rounded-full w-52 -mb-28 sm:mb-0 sm:ml-auto sm:hidden" />
 </header>
 
 <body class="flex items-center justify-center gap-2 p-3 py-10 text-white bg-gray-800 min-h-96 niceBg border-t-lime-400 pt-28 sm:pt-10">
@@ -25,7 +24,7 @@
 		<h3 class="text-3xl italic">Full Stack Web Developer</h3>
 		<p class="text-xl">A software developer with a passion for learning and creating.</p>
 	</div>
-	<img src={ProfilePic} alt="Derek Hearst" class="hidden border-2 rounded-full border-lime-400 w-52 -mb-28 sm:mb-0 sm:block" />
+	<img src="/profile.jpg" alt="Derek Hearst" class="hidden border-2 rounded-full border-lime-400 w-52 -mb-28 sm:mb-0 sm:block" />
 </body>
 
 <body id="aboutme" class="flex flex-col items-center gap-10 p-4 text-white bg-zinc-900 py-9 ">
@@ -54,21 +53,34 @@
 	</div>
 </body>
 
-<body id="projects" class="flex flex-col items-center gap-4 p-3 pt-8 text-white bg-gray-900 min-h-96 border-lime-500">
+<body id="projects" class="flex flex-col items-center gap-8 p-3 pt-8 text-white bg-gray-900 min-h-96 border-lime-500">
 	<h2 class="font-mono text-5xl font-bold">Projects</h2>
-	<article class="flex flex-col max-w-6xl gap-4 p-4 border-2 items border-lime-400">
+	<article class="flex flex-col w-full max-w-6xl gap-4 p-4 bg-slate-800 items border-lime-400">
 		<div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
 			<img src="https://movieknight.uk/assets/logo.d36755ad.png" class="w-36" alt="movie knight" />
-			<h3 class="font-mono text-4xl">Movie Knight</h3>
-			<a href="https://movieknight.uk" target="_blank" class="text-xl underline text-lime-400" rel="noreferrer">https://movieknight.uk</a>
+			<a href="https://movieknight.uk" target="_blank" class="text-3xl underline" rel="noreferrer">Movie Knight</a>
 		</div>
 		<p class="text-xl">The movie knight platform enables users are able to browse through a selection of popular and classic films, select a movie to watch at a specific date and time, and invite their friends to join them. They are also be able to create watch lists of movies they want to see and share these lists with their friends, allowing them to easily plan future movie nights and discover new films to watch together.</p>
-		<p class="text-xl">The platform is built using the MEVN stack, with the front-end built using Vue and the back-end built using Node.js and Express.</p>
-		<p class="text-xl">The back-end is hosted on render and MongoDB Atlas, while the frontend is Hosted with cloudflare Pages.</p>
-		<p class="text-xl">This project was a group effort, and the links to my co-developers github pages can be found in the footer.</p>
+		<p class="text-lime-400 font-mono sp">-Vue -Express.js -MongoDB- Mongoose -Cloudflare Pages</p>
 	</article>
 
-	<article />
+	<article class="flex flex-col w-full max-w-6xl gap-4 p-4  items bg-slate-800 border-lime-400">
+		<div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+			<img src="/printtool.ico" class="w-auto" alt="movie knight" />
+			<a href="https://github.com/derekhearst/printtool" target="_blank" class="text-3xl underline" rel="noreferrer">Print Tool</a>
+		</div>
+		<p class="text-xl">PrintTool is an automated testing and printer management tool I designed while working at HP. It allows for complex logging of printer operations, runtime generated print jobs, and automatic firmware upgrading. It can communicate over serial connections, websockets, and telnet</p>
+		<p class="text-lime-400 font-mono sp">-C# -WPF -WebSockets -Serial Connections -IPP -Web Scraping</p>
+	</article>
+
+	<article class="flex flex-col w-full max-w-6xl gap-4 p-4  items bg-slate-800 border-lime-400">
+		<div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+			<img src="/LogotowerLogo.png" class="w-36" alt="movie knight" />
+			<a href="https://github.com/derekhearst/checkpoint6Tower" target="_blank" class="text-3xl underline" rel="noreferrer">Tower</a>
+		</div>
+		<p class="text-xl">Tower is a event sharing and creation platform, deigned to quickly create social gatherings of all scale.</p>
+		<p class="text-lime-400 font-mono sp">-Vue -Express.js -MongoDB -Bootstrap -Auth0</p>
+	</article>
 </body>
 
 <style>
