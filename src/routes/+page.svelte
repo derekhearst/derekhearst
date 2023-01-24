@@ -3,7 +3,7 @@
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { onMount } from 'svelte';
 	let scrollY: number;
-
+	let hideSmokey = true;
 	let goingUp = false;
 	let lastScroll = 0;
 	$: {
@@ -68,8 +68,10 @@
 <body id="aboutme" class="bg-zinc-900 py-9 md:pt-4 flex flex-col items-center gap-10 p-4 pt-32 text-white">
 	<h3 class="font-mono text-5xl font-bold">About me</h3>
 	<div class="flex flex-col max-w-5xl gap-8 text-xl">
-		<p>My interest in development started with game modding with Lua, leading me to web development and full stack development. I enjoy learning new technologies and creating projects with them.</p>
-		<p>Owned and operated ChronoGaming, a online gaming community with servers that I created custom content for.</p>
+		<p>My interest in development started with creating game addons and maps for Garrys Mod. Learning Lua for game modding led me to taking software development courses in high school, then computer science in college. My passion for development really took off when I created tools for my coworkers while working at HP, leading me to take a web development course at Boise CodeWorks.</p>
+		<p>I love my cat <span class="underline cursor-pointer select-none" on:keydown={() => (hideSmokey = !hideSmokey)} on:click={() => (hideSmokey = !hideSmokey)}>Smokey</span> who i rescued off the street as a kitten, ping pong, video games, and I'm a huge trekkie.</p>
+		<img src="/smokey.jpg" title="My cat Smokey" hidden={hideSmokey} class="w-1/2 h-auto self-center" alt="my cat smokey" />
+		<p>I created custom content for an online gaming community called Chrono Gaming, which I owned and operated. I plan on recreating this server when the game <a href="https://sbox.facepunch.com/news" class="underline cursor-pointer" target="_blank" rel="noreferrer">S&Box</a> comes out of alpha.</p>
 	</div>
 
 	<p class="text-white/70 text-xl">My front-end technologies include JavaScript, TypeScript, Svelte, Vue, Tailwind CSS, and Bootstrap.</p>
