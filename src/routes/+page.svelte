@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-	<meta name="description" content="Hi, my name is derek. I'm a full stack web developer with passion for learning new technologies. This site contains some of the projects I've created." />
+	<meta name="description" content="Hi, my name is Derek Hearst. I'm a full stack web developer with passion for learning new technologies. This site contains some of the projects I've created." />
 	<meta name="keywords" content="Svelte, Portfolio, Derek, Derek Hearst, Web Developer, Software Developer" />
 	<meta name="author" content="Derek Hearst" />
 	<title>Derek Hearst</title>
@@ -37,7 +37,7 @@
 		<h3 class="text-3xl italic">Full Stack Web Developer</h3>
 		<p class="text-xl">A software developer with a passion for learning and creating.</p>
 	</div>
-	<img src={ProfilePic} alt="Derek Hearst" class="border-2 rounded-full border-lime-400 w-52 " />
+	<img src="/profile.jpg" alt="Derek Hearst" class="border-2 rounded-full border-lime-400 w-52 " />
 </body>
 
 <body id="aboutme" class="flex flex-col items-center gap-10 p-4 text-white bg-zinc-900 py-9 pt-32 md:pt-4">
@@ -53,7 +53,7 @@
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png?20120221235433" alt="javascript" width="80" />
 		<img src="https://cdn.cdnlogo.com/logos/s/6/svelte.svg" alt="svelte" width="80" />
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png" alt="vue" width="80" />
-		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" alt="tailwin" width="80" />
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" alt="tailwind css" width="80" />
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="bootstrap" width="80" />
 	</div>
 
@@ -66,21 +66,34 @@
 	</div>
 </body>
 
-<body id="projects" class="flex flex-col items-center gap-4 p-3 pt-8 text-white bg-gray-900 min-h-96 border-lime-500">
+<body id="projects" class="flex flex-col items-center gap-8 p-3 pt-8 text-white bg-gray-900 min-h-96 border-lime-500">
 	<h2 class="font-mono text-5xl font-bold">Projects</h2>
-	<article class="flex flex-col max-w-6xl gap-4 p-4 border-2 items border-lime-400">
+	<article class="flex flex-col w-full max-w-6xl gap-4 p-4 bg-slate-800 items border-lime-400">
 		<div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
 			<img src="https://movieknight.uk/assets/logo.d36755ad.png" class="w-36" alt="movie knight" />
-			<h3 class="font-mono text-4xl">Movie Knight</h3>
-			<a href="https://movieknight.uk" target="_blank" class="text-xl underline text-lime-400" rel="noreferrer">https://movieknight.uk</a>
+			<a href="https://movieknight.uk" target="_blank" class="text-3xl underline" rel="noreferrer">Movie Knight</a>
 		</div>
 		<p class="text-xl">The movie knight platform enables users are able to browse through a selection of popular and classic films, select a movie to watch at a specific date and time, and invite their friends to join them. They are also be able to create watch lists of movies they want to see and share these lists with their friends, allowing them to easily plan future movie nights and discover new films to watch together.</p>
-		<p class="text-xl">The platform is built using the MEVN stack, with the front-end built using Vue and the back-end built using Node.js and Express.</p>
-		<p class="text-xl">The back-end is hosted on render and MongoDB Atlas, while the frontend is Hosted with cloudflare Pages.</p>
-		<p class="text-xl">This project was a group effort, and the links to my co-developers github pages can be found in the footer.</p>
+		<p class="text-lime-400 font-mono sp">-Vue -Express.js -MongoDB- Mongoose -Cloudflare Pages</p>
 	</article>
 
-	<article />
+	<article class="flex flex-col w-full max-w-6xl gap-4 p-4  items bg-slate-800 border-lime-400">
+		<div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+			<img src="/printtool.ico" class="w-auto" alt="movie knight" />
+			<a href="https://github.com/derekhearst/printtool" target="_blank" class="text-3xl underline" rel="noreferrer">Print Tool</a>
+		</div>
+		<p class="text-xl">PrintTool is an automated testing and printer management tool I designed while working at HP. It allows for complex logging of printer operations, runtime generated print jobs, and automatic firmware upgrading. It can communicate over serial connections, websockets, and telnet</p>
+		<p class="text-lime-400 font-mono sp">-C# -WPF -WebSockets -Serial Connections -IPP -Web Scraping</p>
+	</article>
+
+	<article class="flex flex-col w-full max-w-6xl gap-4 p-4  items bg-slate-800 border-lime-400">
+		<div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+			<img src="/LogotowerLogo.png" class="w-36" alt="movie knight" />
+			<a href="https://github.com/derekhearst/checkpoint6Tower" target="_blank" class="text-3xl underline" rel="noreferrer">Tower</a>
+		</div>
+		<p class="text-xl">Tower is a event sharing and creation platform, deigned to quickly create social gatherings of all scale.</p>
+		<p class="text-lime-400 font-mono sp">-Vue -Express.js -MongoDB -Bootstrap -Auth0</p>
+	</article>
 </body>
 
 <style>
