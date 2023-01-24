@@ -122,10 +122,10 @@
 
 	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
 		<div class="sm:justify-start flex flex-wrap items-center justify-center gap-4">
-			<img src="/inspire.png" class="w-36" alt="inspire" />
+			<img src="/inspire.png" class="h-14" alt="inspire" />
 			<a href="https://inspire.derekhearst.com" target="_blank" class="text-3xl underline" rel="noreferrer">Inspire 🔗</a>
 		</div>
-		<p class="text-xl">Inspire is an expanded upon todo-list that fetches from multiple apis to include, weather, time, todos, quotes, and a random background image.</p>
+		<p class="text-xl">Inspire is an expanded upon todo-list that fetches from multiple apis to include, weather, time, to-dos, quotes, and a random background image.</p>
 		<p class="text-lime-400 sp font-mono">-Svelte -TailwindCSS -Vite -API's</p>
 	</article>
 </body>
