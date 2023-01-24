@@ -99,7 +99,7 @@
 			<a href="https://movieknight.uk" target="_blank" class="text-3xl underline" rel="noreferrer">Movie Knight 🔗</a>
 		</div>
 		<p class="text-xl">The movie knight platform enables users are able to browse through a selection of popular and classic films, select a movie to watch at a specific date and time, and invite their friends to join them. They are also be able to create watch lists of movies they want to see and share these lists with their friends, allowing them to easily plan future movie nights and discover new films to watch together.</p>
-		<p class="text-lime-400 sp font-mono">-Vue -Express.js -MongoDB- Mongoose -Cloudflare Pages</p>
+		<p class="text-lime-400 sp font-mono">-Vue -Express.js -MongoDB -Mongoose -Cloudflare Pages</p>
 	</article>
 
 	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
@@ -118,6 +118,15 @@
 		</div>
 		<p class="text-xl">Tower is a event sharing and creation platform, deigned to quickly create social gatherings of all scale.</p>
 		<p class="text-lime-400 sp font-mono">-Vue -Express.js -MongoDB -Bootstrap -Auth0</p>
+	</article>
+
+	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
+		<div class="sm:justify-start flex flex-wrap items-center justify-center gap-4">
+			<img src="/inspire.png" class="w-36" alt="inspire" />
+			<a href="https://inspire.derekhearst.com" target="_blank" class="text-3xl underline" rel="noreferrer">Inspire 🔗</a>
+		</div>
+		<p class="text-xl">Inspire is an expanded upon todo-list that fetches from multiple apis to include, weather, time, todos, quotes, and a random background image.</p>
+		<p class="text-lime-400 sp font-mono">-Svelte -TailwindCSS -Vite -API's</p>
 	</article>
 </body>
 
