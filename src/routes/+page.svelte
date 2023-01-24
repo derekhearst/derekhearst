@@ -1,5 +1,17 @@
-<script>
+<script lang="ts">
 	import ProfilePic from '$lib/images/profile.jpg';
+	let scrollY: number;
+
+	let goingUp = false;
+	let lastScroll = 0;
+	$: {
+		if (scrollY < lastScroll) {
+			goingUp = false;
+		} else {
+			goingUp = true;
+		}
+		lastScroll = scrollY;
+	}
 </script>
 
 <svelte:head>
@@ -8,27 +20,27 @@
 	<meta name="author" content="Derek Hearst" />
 	<title>Derek Hearst</title>
 </svelte:head>
+<svelte:window bind:scrollY />
 
-<header class="flex flex-col flex-wrap items-center justify-center gap-6 p-3 py-3 font-mono text-3xl text-center bg-zinc-900 text-lime-400 sm:py-5 sm:flex-row sm:justify-start ">
+<header class="flex flex-col flex-wrap items-center justify-center gap-6 p-3 py-3 font-mono text-3xl text-center bg-zinc-900 text-lime-400 sm:py-5 sm:flex-row md:justify-start sticky top-0 transition-all ease-in-out duration-300" class:goingUp>
 	<h1 class="text-6xl font-bold">Derek Hearst</h1>
 	<nav class="flex flex-wrap items-center justify-center gap-6 text-white underline">
 		<a href="#projects">Projects</a>
 		<a href="https://github.com/derekhearst" target="_blank" rel="noreferrer">GitHub</a>
 		<a href="https://www.linkedin.com/in/derekhearst/" target="_blank" rel="noreferrer">LinkedIn</a>
 	</nav>
-	<img src={ProfilePic} alt="Derek Hearst" class="block rounded-full w-52 -mb-28 sm:mb-0 sm:ml-auto sm:hidden" />
 </header>
 
-<body class="flex items-center justify-center gap-2 p-3 py-10 text-white bg-gray-800 min-h-96 niceBg border-t-lime-400 pt-28 sm:pt-10">
+<body class="flex flex-col md:flex-row items-center justify-center gap-2 p-3 py-10 text-white bg-gray-800 min-h-96 niceBg border-t-lime-400 -mb-36 md:mb-0">
 	<div class="flex flex-col items-center gap-4">
 		<h2 class="text-4xl">Hi, I'm <span class="font-mono text-lime-400">Derek Hearst</span></h2>
 		<h3 class="text-3xl italic">Full Stack Web Developer</h3>
 		<p class="text-xl">A software developer with a passion for learning and creating.</p>
 	</div>
-	<img src={ProfilePic} alt="Derek Hearst" class="hidden border-2 rounded-full border-lime-400 w-52 -mb-28 sm:mb-0 sm:block" />
+	<img src={ProfilePic} alt="Derek Hearst" class="border-2 rounded-full border-lime-400 w-52 " />
 </body>
 
-<body id="aboutme" class="flex flex-col items-center gap-10 p-4 text-white bg-zinc-900 py-9 ">
+<body id="aboutme" class="flex flex-col items-center gap-10 p-4 text-white bg-zinc-900 py-9 pt-32 md:pt-4">
 	<h3 class="font-mono text-5xl font-bold">About me</h3>
 	<div class="flex flex-col max-w-5xl gap-8 text-xl">
 		<p>My interest in development started with game modding with Lua, leading me to web development and full stack development. I enjoy learning new technologies and creating projects with them.</p>
@@ -89,6 +101,14 @@
 		}
 		100% {
 			background-position: 0% 50%;
+		}
+	}
+	.goingUp {
+		top: -180px;
+	}
+	@media (max-width: 768px) {
+		.goingUp {
+			top: -400px;
 		}
 	}
 </style>
