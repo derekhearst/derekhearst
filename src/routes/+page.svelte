@@ -31,7 +31,7 @@
 						scrub: 1,
 
 						start: 'top 90%',
-						end: '80% 90%'
+						end: '90% 90%'
 					}
 				}
 			);
@@ -114,7 +114,7 @@
 	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
 		<div class="sm:justify-start flex flex-wrap items-center justify-center gap-4">
 			<img src="/LogotowerLogo.png" class="w-36" alt="movie knight" />
-			<a href="https://github.com/derekhearst/checkpoint6Tower" target="_blank" class="text-3xl underline" rel="noreferrer">Tower 🔗</a>
+			<a href="https://tower.derekhearst.com" target="_blank" class="text-3xl underline" rel="noreferrer">Tower 🔗</a>
 		</div>
 		<p class="text-xl">Tower is a event sharing and creation platform, deigned to quickly create social gatherings of all scale.</p>
 		<p class="text-lime-400 sp font-mono">-Vue -Express.js -MongoDB -Bootstrap -Auth0</p>
