@@ -1,5 +1,8 @@
 <script lang="ts">
 	import ProfilePic from '$lib/images/profile.jpg';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { onMount } from 'svelte';
 	let scrollY: number;
 
 	let goingUp = false;
@@ -12,6 +15,29 @@
 		}
 		lastScroll = scrollY;
 	}
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		let fromLefts = gsap.utils.toArray('#fromLeft');
+		fromLefts.forEach((fromLeft) => {
+			gsap.fromTo(
+				fromLeft,
+				{
+					x: '110%'
+				},
+				{
+					x: '0%',
+					scrollTrigger: {
+						trigger: fromLeft,
+						scrub: 1,
+
+						start: 'top 90%',
+						end: '80% 90%'
+					}
+				}
+			);
+		});
+	});
 </script>
 
 <svelte:head>
@@ -22,32 +48,32 @@
 </svelte:head>
 <svelte:window bind:scrollY />
 
-<header class="flex flex-col flex-wrap items-center justify-center gap-6 p-3 py-3 font-mono text-3xl text-center bg-zinc-900 text-lime-400 sm:py-5 sm:flex-row md:justify-start sticky top-0 transition-all ease-in-out duration-300" class:goingUp>
-	<h1 class="text-6xl font-bold">Derek Hearst</h1>
-	<nav class="flex flex-wrap items-center justify-center gap-6 text-white underline">
+<header class="bg-zinc-900 text-lime-400 sm:py-5 sm:flex-row md:justify-start sticky top-0 z-10 flex flex-col flex-wrap items-center justify-center gap-6 p-3 py-3 font-mono text-3xl text-center transition-all duration-300 ease-in-out" class:goingUp>
+	<h1 class="sm:text-6xl font-bold">Derek Hearst</h1>
+	<nav class="md:text-2xl flex flex-wrap items-center justify-center gap-6 text-lg text-white underline">
 		<a href="#projects">Projects</a>
 		<a href="https://github.com/derekhearst" target="_blank" rel="noreferrer">GitHub</a>
 		<a href="https://www.linkedin.com/in/derekhearst/" target="_blank" rel="noreferrer">LinkedIn</a>
 	</nav>
 </header>
 
-<body class="flex flex-col md:flex-row items-center justify-center gap-2 p-3 py-10 text-white bg-gray-800 min-h-96 niceBg border-t-lime-400 -mb-36 md:mb-0">
+<body class="md:flex-row min-h-96 niceBg border-t-lime-400 -mb-36 md:mb-0 flex flex-col items-center justify-center gap-2 p-3 py-10 text-white bg-gray-800">
 	<div class="flex flex-col items-center gap-4">
-		<h2 class="text-4xl">Hi, I'm <span class="font-mono text-lime-400">Derek Hearst</span></h2>
+		<h2 class="text-4xl">Hi, I'm <span class="text-lime-400 font-mono">Derek Hearst</span></h2>
 		<h3 class="text-3xl italic">Full Stack Web Developer</h3>
 		<p class="text-xl">A software developer with a passion for learning and creating.</p>
 	</div>
-	<img src="/profile.jpg" alt="Derek Hearst" class="border-2 rounded-full border-lime-400 w-52 " />
+	<img src="/profile.jpg" alt="Derek Hearst" class="border-lime-400 w-52 border-2 rounded-full" />
 </body>
 
-<body id="aboutme" class="flex flex-col items-center gap-10 p-4 text-white bg-zinc-900 py-9 pt-32 md:pt-4">
+<body id="aboutme" class="bg-zinc-900 py-9 md:pt-4 flex flex-col items-center gap-10 p-4 pt-32 text-white">
 	<h3 class="font-mono text-5xl font-bold">About me</h3>
 	<div class="flex flex-col max-w-5xl gap-8 text-xl">
 		<p>My interest in development started with game modding with Lua, leading me to web development and full stack development. I enjoy learning new technologies and creating projects with them.</p>
 		<p>Owned and operated ChronoGaming, a online gaming community with servers that I created custom content for.</p>
 	</div>
 
-	<p class="text-xl text-white/70">My front-end technologies include JavaScript, TypeScript, Svelte, Vue, Tailwind CSS, and Bootstrap.</p>
+	<p class="text-white/70 text-xl">My front-end technologies include JavaScript, TypeScript, Svelte, Vue, Tailwind CSS, and Bootstrap.</p>
 	<div class="flex flex-wrap items-center justify-center w-full gap-5">
 		<img src="https://cdn.cdnlogo.com/logos/t/96/typescript.svg" width="80" alt="typescript" />
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png?20120221235433" alt="javascript" width="80" />
@@ -57,7 +83,7 @@
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="bootstrap" width="80" />
 	</div>
 
-	<p class="text-xl text-white/70">My back-end technologies includes Node.js, Express, MongoDB, SQL, C#, and ASP.NET .</p>
+	<p class="text-white/70 text-xl">My back-end technologies includes Node.js, Express, MongoDB, SQL, C#, and ASP.NET .</p>
 	<div class="flex flex-wrap items-center justify-center w-full gap-5">
 		<img src="https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg" width="80" alt="nodejs" />
 		<img src="https://cdn.cdnlogo.com/logos/m/30/mongodb-icon.svg" width="80" alt="mongodb" />
@@ -66,35 +92,40 @@
 	</div>
 </body>
 
-<body id="projects" class="flex flex-col items-center gap-8 p-3 pt-8 text-white bg-gray-900 min-h-96 border-lime-500">
+<body id="projects" class="min-h-96 border-lime-500 flex flex-col items-center gap-8 p-3 pt-8 overflow-hidden text-white bg-gray-900">
 	<h2 class="font-mono text-5xl font-bold">Projects</h2>
-	<article class="flex flex-col w-full max-w-6xl gap-4 p-4 bg-slate-800 items border-lime-400">
-		<div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
+		<div class="sm:justify-start flex flex-wrap items-center justify-center gap-4">
 			<img src="https://movieknight.uk/assets/logo.d36755ad.png" class="w-36" alt="movie knight" />
-			<a href="https://movieknight.uk" target="_blank" class="text-3xl underline" rel="noreferrer">Movie Knight</a>
+			<a href="https://movieknight.uk" target="_blank" class="text-3xl underline" rel="noreferrer">Movie Knight 🔗</a>
 		</div>
 		<p class="text-xl">The movie knight platform enables users are able to browse through a selection of popular and classic films, select a movie to watch at a specific date and time, and invite their friends to join them. They are also be able to create watch lists of movies they want to see and share these lists with their friends, allowing them to easily plan future movie nights and discover new films to watch together.</p>
-		<p class="text-lime-400 font-mono sp">-Vue -Express.js -MongoDB- Mongoose -Cloudflare Pages</p>
+		<p class="text-lime-400 sp font-mono">-Vue -Express.js -MongoDB- Mongoose -Cloudflare Pages</p>
 	</article>
 
-	<article class="flex flex-col w-full max-w-6xl gap-4 p-4  items bg-slate-800 border-lime-400">
-		<div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
+		<div class="sm:justify-start flex flex-wrap items-center justify-center gap-4">
 			<img src="/printtool.ico" class="w-auto" alt="movie knight" />
-			<a href="https://github.com/derekhearst/printtool" target="_blank" class="text-3xl underline" rel="noreferrer">Print Tool</a>
+			<a href="https://github.com/derekhearst/printtool" target="_blank" class="text-3xl underline" rel="noreferrer">Print Tool 🔗 </a>
 		</div>
-		<p class="text-xl">PrintTool is an automated testing and printer management tool I designed while working at HP. It allows for complex logging of printer operations, runtime generated print jobs, and automatic firmware upgrading. It can communicate over serial connections, websockets, and telnet</p>
-		<p class="text-lime-400 font-mono sp">-C# -WPF -WebSockets -Serial Connections -IPP -Web Scraping</p>
+		<p class="text-xl">PrintTool is an automated testing and printer management tool I designed while working at HP. It allows for complex logging of printer operations, runtime generated print jobs, and automatic firmware upgrading. It can communicate over serial connections, WebSockets, and telnet</p>
+		<p class="text-lime-400 sp font-mono">-C# -WPF -WebSockets -Serial Connections -IPP -Web Scraping</p>
 	</article>
 
-	<article class="flex flex-col w-full max-w-6xl gap-4 p-4  items bg-slate-800 border-lime-400">
-		<div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
+		<div class="sm:justify-start flex flex-wrap items-center justify-center gap-4">
 			<img src="/LogotowerLogo.png" class="w-36" alt="movie knight" />
-			<a href="https://github.com/derekhearst/checkpoint6Tower" target="_blank" class="text-3xl underline" rel="noreferrer">Tower</a>
+			<a href="https://github.com/derekhearst/checkpoint6Tower" target="_blank" class="text-3xl underline" rel="noreferrer">Tower 🔗</a>
 		</div>
 		<p class="text-xl">Tower is a event sharing and creation platform, deigned to quickly create social gatherings of all scale.</p>
-		<p class="text-lime-400 font-mono sp">-Vue -Express.js -MongoDB -Bootstrap -Auth0</p>
+		<p class="text-lime-400 sp font-mono">-Vue -Express.js -MongoDB -Bootstrap -Auth0</p>
 	</article>
 </body>
+
+<footer class="bg-zinc-900 flex flex-col items-center justify-center gap-6 p-3 py-5 text-white">
+	<p class="text-xl">Made with SvelteKit and Tailwind CSS</p>
+	<p class="text-xl">© 2023 Derek Hearst</p>
+</footer>
 
 <style>
 	.niceBg {
