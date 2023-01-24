@@ -1,5 +1,4 @@
 <script lang="ts">
-	import ProfilePic from '$lib/images/profile.jpg';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { onMount } from 'svelte';
