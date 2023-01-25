@@ -69,15 +69,15 @@
 	<h3 class="font-mono text-5xl font-bold">About me</h3>
 	<div class="flex flex-col max-w-5xl gap-8 text-xl">
 		<p>My interest in development started with creating game addons and maps for Garrys Mod. Learning Lua for game modding led me to taking software development courses in high school, then computer science in college. My passion for development really took off when I created tools for my coworkers while working at HP, and I decided to take a web development course at Boise CodeWorks.</p>
-		<p>I love my cat <span class="underline cursor-pointer select-none" on:keydown={() => (hideSmokey = !hideSmokey)} on:click={() => (hideSmokey = !hideSmokey)}>Smokey</span> who I rescued off the street as a kitten, ping pong, video games, and I'm a huge trekkie.</p>
+		<p>I love my cat <span class="font-bold underline underline-offset-4 cursor-pointer select-none" on:keydown={() => (hideSmokey = !hideSmokey)} on:click={() => (hideSmokey = !hideSmokey)}>Smokey</span> who I rescued off the street as a kitten, ping pong, video games, and science fiction.</p>
 		<img src="/smokey.jpg" title="My cat Smokey" hidden={hideSmokey} class="w-1/2 h-auto self-center" alt="my cat smokey" />
 		<p>I created custom content for an online gaming community called Chrono Gaming, which I owned and operated. I plan on recreating this server when the game <a href="https://sbox.facepunch.com/news" class="underline cursor-pointer" target="_blank" rel="noreferrer">S&Box</a> comes out of alpha.</p>
 	</div>
 
 	<p class="text-white/70 text-xl">My front-end technologies include JavaScript, TypeScript, Svelte, Vue, Tailwind CSS, and Bootstrap.</p>
 	<div class="flex flex-wrap items-center justify-center w-full gap-5">
-		<img src="https://cdn.cdnlogo.com/logos/t/96/typescript.svg" width="80" alt="typescript" />
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png?20120221235433" alt="javascript" width="80" />
+		<img src="https://cdn.cdnlogo.com/logos/t/96/typescript.svg" width="80" alt="typescript" />
 		<img src="https://cdn.cdnlogo.com/logos/s/6/svelte.svg" alt="svelte" width="80" />
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png" alt="vue" width="80" />
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" alt="tailwind css" width="80" />
