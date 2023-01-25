@@ -30,8 +30,8 @@
 						trigger: fromLeft,
 						scrub: 1,
 
-						start: 'top 90%',
-						end: '90% 90%'
+						start: 'top 95%',
+						end: 'bottom 95%'
 					}
 				}
 			);
