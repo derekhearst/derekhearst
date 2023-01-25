@@ -20,6 +20,7 @@
 		let fromLefts = gsap.utils.toArray('#fromLeft');
 		fromLefts.forEach((fromLeft) => {
 			gsap.fromTo(
+				// @ts-ignore
 				fromLeft,
 				{
 					x: '110%'
@@ -29,7 +30,6 @@
 					scrollTrigger: {
 						trigger: fromLeft,
 						scrub: 1,
-
 						start: 'top 95%',
 						end: 'bottom 95%'
 					}
