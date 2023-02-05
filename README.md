@@ -6,12 +6,14 @@ Check out my website for more information
 
 #### My Languages and Frameworks:
 
-<a href="https://github.com/derekhearst">
-  <img align=center src="https://cdn.cdnlogo.com/logos/t/96/typescript.svg" width="80" alt="typescript" />
-</a>
+
 
 <a href="https://github.com/derekhearst">
   <img align=center src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png?20120221235433" alt="javascript" width="80" />  
+</a>
+
+<a href="https://github.com/derekhearst">
+  <img align=center src="https://cdn.cdnlogo.com/logos/t/96/typescript.svg" width="80" alt="typescript" />
 </a>
     
 <a href="https://github.com/derekhearst">
