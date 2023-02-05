@@ -106,7 +106,7 @@
 
 	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
 		<div class="sm:justify-start flex flex-wrap items-center justify-center gap-4">
-			<img src="/logo.png" class="w-36" alt="movie knight" />
+			<img src="/logo.webp" class="w-36" alt="movie knight" />
 			<a href="https://movieknight.uk" target="_blank" class="text-3xl underline" rel="noreferrer">Movie Knight 🔗</a>
 		</div>
 		<p class="text-xl">The movie knight platform enables users are able to browse through a selection of popular and classic films, select a movie to watch at a specific date and time, and invite their friends to join them. They are also be able to create watch lists of movies they want to see and share these lists with their friends, allowing them to easily plan future movie nights and discover new films to watch together.</p>
