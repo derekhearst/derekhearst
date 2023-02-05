@@ -62,7 +62,7 @@
 		<h3 class="text-3xl italic">Full Stack Web Developer</h3>
 		<p class="text-xl">A software developer with a passion for learning and creating.</p>
 	</div>
-	<img src="/profile.jpg" alt="Derek Hearst" class="border-lime-400 w-52 border-2 rounded-full" />
+	<img src="/profile.webp" alt="Derek Hearst" class="border-lime-400 w-52 border-2 rounded-full" />
 </body>
 
 <body id="aboutme" class="bg-zinc-900 py-9 md:pt-4 flex flex-col items-center gap-10 p-4 pt-32 text-white">
@@ -70,7 +70,7 @@
 	<div class="flex flex-col max-w-5xl gap-8 text-xl">
 		<p>My interest in development started with creating game addons and maps for Garrys Mod. Learning Lua for game modding led me to taking software development courses in high school, then computer science in college. My passion for development really took off when I created tools for my coworkers while working at HP, and I decided to take a web development course at Boise CodeWorks.</p>
 		<p>I love my cat <span class="font-bold underline underline-offset-4 cursor-pointer select-none" on:keydown={() => (hideSmokey = !hideSmokey)} on:click={() => (hideSmokey = !hideSmokey)}>Smokey</span> who I rescued off the street as a kitten, ping pong, video games, and science fiction.</p>
-		<img src="/smokey.jpg" title="My cat Smokey" hidden={hideSmokey} class="w-1/2 h-auto self-center" alt="my cat smokey" />
+		<img src="/smokey.webp" title="My cat Smokey" hidden={hideSmokey} class="w-1/2 h-auto self-center" alt="my cat smokey" />
 		<p>I created custom content for an online gaming community called Chrono Gaming, which I owned and operated. I plan on recreating this server when the game <a href="https://sbox.facepunch.com/news" class="underline cursor-pointer" target="_blank" rel="noreferrer">S&Box</a> comes out of alpha.</p>
 	</div>
 
@@ -97,7 +97,7 @@
 	<h2 class="font-mono text-5xl font-bold">Projects</h2>
 	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
 		<div class="sm:justify-start flex flex-wrap items-center justify-center gap-4">
-			<img src="https://movieknight.uk/assets/logo.d36755ad.png" class="w-36" alt="movie knight" />
+			<img src="/logo.webp" class="w-36" alt="movie knight" />
 			<a href="https://movieknight.uk" target="_blank" class="text-3xl underline" rel="noreferrer">Movie Knight 🔗</a>
 		</div>
 		<p class="text-xl">The movie knight platform enables users are able to browse through a selection of popular and classic films, select a movie to watch at a specific date and time, and invite their friends to join them. They are also be able to create watch lists of movies they want to see and share these lists with their friends, allowing them to easily plan future movie nights and discover new films to watch together.</p>
@@ -115,7 +115,7 @@
 
 	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
 		<div class="sm:justify-start flex flex-wrap items-center justify-center gap-4">
-			<img src="/LogotowerLogo.png" class="w-36" alt="movie knight" />
+			<img src="/LogotowerLogo.webp" class="w-36" alt="movie knight" />
 			<a href="https://tower.derekhearst.com" target="_blank" class="text-3xl underline" rel="noreferrer">Tower 🔗</a>
 		</div>
 		<p class="text-xl">Tower is a event sharing and creation platform, deigned to quickly create social gatherings of all scale.</p>
@@ -124,7 +124,7 @@
 
 	<article id="fromLeft" class="bg-slate-800 border-lime-400 flex flex-col w-full max-w-6xl gap-4 p-4">
 		<div class="sm:justify-start flex flex-wrap items-center justify-center gap-4">
-			<img src="/inspire.png" class="h-14" alt="inspire" />
+			<img src="/inspire.webp" class="h-14" alt="inspire" />
 			<a href="https://inspire.derekhearst.com" target="_blank" class="text-3xl underline" rel="noreferrer">Inspire 🔗</a>
 		</div>
 		<p class="text-xl">Inspire is an expanded upon todo-list that fetches from multiple apis to include, weather, time, to-dos, quotes, and a random background image.</p>
