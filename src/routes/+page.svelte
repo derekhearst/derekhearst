@@ -61,7 +61,7 @@
 		<h2 class="text-4xl">Hi, I'm <span class="text-lime-400 font-mono">Derek Hearst</span></h2>
 		<h3 class="text-3xl italic">Full Stack Web Developer</h3>
 		<p class="text-xl">A software developer with a passion for learning and creating.</p>
-		<p>You can contact me at <a class="underline" href="mailto:derekallenhearst@gmail.com">derekallenhearst@gmail.com</a></p>
+		<p>You can contact me at <a class="underline underline-offset-2" href="mailto:derekallenhearst@gmail.com">derekallenhearst@gmail.com</a></p>
 	</div>
 	<img src="/derek.webp" alt="Derek Hearst" class="border-lime-400 w-52 border-2  rounded-full" />
 </body>
