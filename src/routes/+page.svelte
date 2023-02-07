@@ -61,14 +61,15 @@
 		<h2 class="text-4xl">Hi, I'm <span class="text-lime-400 font-mono">Derek Hearst</span></h2>
 		<h3 class="text-3xl italic">Full Stack Web Developer</h3>
 		<p class="text-xl">A software developer with a passion for learning and creating.</p>
+		<p>You can contact me at <a class="underline" href="mailto:derekallenhearst@gmail.com">derekallenhearst@gmail.com</a></p>
 	</div>
-	<img src="/profile.jpg" alt="Derek Hearst" class="border-lime-400 w-52 border-2 rounded-full" />
+	<img src="/derek.webp" alt="Derek Hearst" class="border-lime-400 w-52 border-2  rounded-full" />
 </body>
 
 <body id="aboutme" class="bg-zinc-900 py-9 md:pt-4 flex flex-col items-center gap-10 p-4 pt-32 text-white">
 	<h3 class="font-mono text-5xl font-bold">About me</h3>
 	<div class="flex flex-col max-w-5xl gap-8 text-xl">
-		<p>My interest in development started with creating game addons and maps for Garrys Mod. Learning Lua for game modding led me to taking software development courses in high school, then computer science in college. My passion for development really took off when I created tools for my coworkers while working at HP, and I decided to take a web development course at Boise CodeWorks.</p>
+		<p>My interest in development started with creating game addons and maps for Garrys Mod. Learning Lua for game modding led me to taking software development courses in high school, then computer science in college. My passion for development really took off when I created tools for my coworkers while working at HP, and I decided to take a web development course at Boise CodeWorks. </p>
 		<p>I love my cat <span class="font-bold underline underline-offset-4 cursor-pointer select-none" on:keydown={() => (hideSmokey = !hideSmokey)} on:click={() => (hideSmokey = !hideSmokey)}>Smokey</span> who I rescued off the street as a kitten, ping pong, video games, and science fiction.</p>
 		<img src="/smokey.jpg" title="My cat Smokey" hidden={hideSmokey} class="w-1/2 h-auto self-center" alt="my cat smokey" />
 		<p>I created custom content for an online gaming community called Chrono Gaming, which I owned and operated. I plan on recreating this server when the game <a href="https://sbox.facepunch.com/news" class="underline cursor-pointer" target="_blank" rel="noreferrer">S&Box</a> comes out of alpha.</p>
