@@ -1,42 +1,24 @@
 <h1 align=center> Hello, I'm Derek Hearst </h1>
 <h4 align=center> Passionate Web Developer <a href="https://derekhearst.com">www.derekhearst.com</a> </h4>
 
-I'm a Full Stack Web Developer that's passionate about UX design. My interest in development started with game modding with Lua, leading me to web development and full stack development. I'm proficient with web technologies like vue, sveltekit, express.js, asp.net, and serverless computing.
+I'm a Full Stack Web Developer that's passionate about Svelte. My interest in development started with game modding with Lua, leading me to web development and full stack development. I'm proficient Svelte, SvelteKit, TailwindCSS, Bun, Azure, Cloudflare, Docker, and various other libaries.
 Check out my website for more information
 
 #### My Languages and Frameworks:
 
 
 
-<a href="https://github.com/derekhearst">
-  <img align=center src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png?20120221235433" alt="javascript" width="80" />  
-</a>
-
-<a href="https://github.com/derekhearst">
-  <img align=center src="https://cdn.cdnlogo.com/logos/t/96/typescript.svg" width="80" alt="typescript" />
-</a>
-    
-<a href="https://github.com/derekhearst">
-  <img align=center src="https://cdn.cdnlogo.com/logos/c/27/c.svg"  src="c-sharp" width=80 />  
-</a>
+<div>
   
-
-
-<a href="https://github.com/derekhearst">
-  <img align="center" src="https://cdn.cdnlogo.com/logos/s/6/svelte.svg" alt="svelte" width="80" />
- </a>
- <a href="https://github.com/derekhearst">
-  <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png" alt="vue" width=80/>
-</a>
-
-<a href="https://github.com/derekhearst">
-  <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" alt="tailwin" width="80"/>
-</a>
-
-<a href="https://github.com/derekhearst">
-  <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" alt="bootstrap" width=80/>
-</a>
-
+  <img src="https://cdn.cdnlogo.com/logos/s/6/svelte.svg" alt="svelte" width="80"  align="center"/>
+  <img src="https://cdn.cdnlogo.com/logos/t/96/typescript.svg" alt="typescript"  width="80" align=center />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" alt="tailwindcss" width="80" align="center"/>
+  <img src="https://bun.sh/logo.svg" alt="Bun" width="80" align="center">
+  <img src="https://www.cdnlogo.com/logos/d/41/docker.svg" alt="docker" width="80" align="center">
+  <img src="https://www.cdnlogo.com/logos/a/12/azure.svg" alt="docker" width="80" align="center">
+ <img src="https://www.cdnlogo.com/logos/c/5/cloudflare.svg" width="80" align="center">
+  
+</div>
 
 <hr/>
 
