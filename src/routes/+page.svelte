@@ -1,44 +1,5 @@
 <script lang="ts">
-	import gsap from 'gsap'
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-	import { onMount } from 'svelte'
-
-	let scrollY: number
 	let hideSmokey = true
-	let goingUp = false
-	let lastScroll = 0
-	$: {
-		if (scrollY < lastScroll) {
-			goingUp = false
-		} else {
-			goingUp = true
-		}
-		lastScroll = scrollY
-	}
-
-	onMount(() => {
-		console.log('mounted')
-		gsap.registerPlugin(ScrollTrigger)
-		let fromLefts = gsap.utils.toArray('#fromLeft')
-		fromLefts.forEach((fromLeft) => {
-			gsap.fromTo(
-				// @ts-ignore
-				fromLeft,
-				{
-					x: '110%',
-				},
-				{
-					x: '0%',
-					scrollTrigger: {
-						trigger: fromLeft,
-						scrub: 1,
-						start: 'top 95%',
-						end: 'bottom 95%',
-					},
-				},
-			)
-		})
-	})
 </script>
 
 <svelte:head>
@@ -49,18 +10,6 @@
 	<meta name="author" content="Derek Hearst" />
 	<title>Derek Hearst</title>
 </svelte:head>
-<svelte:window bind:scrollY />
-
-<header
-	class="sticky top-0 z-10 flex flex-col flex-wrap items-center justify-center gap-6 bg-zinc-900 p-3 py-3 text-center font-mono text-3xl text-lime-400 transition-all duration-300 ease-in-out sm:flex-row sm:py-5 md:justify-start"
-	class:goingUp>
-	<h1 class="font-bold sm:text-6xl">Derek Hearst</h1>
-	<nav class="flex flex-wrap items-center justify-center gap-6 text-lg text-white underline md:text-2xl">
-		<a href="#projects">Projects</a>
-		<a href="https://github.com/derekhearst" target="_blank" rel="noreferrer">GitHub</a>
-		<a href="https://www.linkedin.com/in/derekhearst/" target="_blank" rel="noreferrer">LinkedIn</a>
-	</nav>
-</header>
 
 <body
 	class="niceBg -mb-36 flex min-h-96 flex-col items-center justify-center gap-2 border-t-lime-400 bg-gray-800 p-3 py-10 text-white md:mb-0 md:flex-row">
@@ -239,14 +188,6 @@
 		}
 		100% {
 			background-position: 0% 50%;
-		}
-	}
-	.goingUp {
-		top: -180px;
-	}
-	@media (max-width: 768px) {
-		.goingUp {
-			top: -400px;
 		}
 	}
 </style>
