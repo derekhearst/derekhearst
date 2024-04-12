@@ -1,37 +1,41 @@
-import typescript from 'typescript-eslint'
+import js from '@eslint/js'
+import ts from 'typescript-eslint'
 import svelte from 'eslint-plugin-svelte'
-import svelteParser from 'svelte-eslint-parser'
 import prettier from 'eslint-config-prettier'
+import globals from 'globals'
 
-/** @type { import("eslint").Linter.FlatConfig[] } */
+/** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-	// Default typescript rules
-	...typescript.configs.recommended,
+	js.configs.recommended,
+	...ts.configs.recommended,
+	...svelte.configs['flat/recommended'],
+	prettier,
+	...svelte.configs['flat/prettier'],
 	{
-		ignores: ['**/.svelte-kit/', '**/node_modules/', '**/build/'],
-	},
-	{
-		files: ['**/*.svelte'],
 		languageOptions: {
-			parser: svelteParser,
-			parserOptions: {
-				parser: typescript.parser,
+			globals: {
+				...globals.browser,
+				...globals.node,
 			},
 		},
 	},
 	{
-		plugins: {
-			svelte: svelte,
-			prettier: prettier,
+		files: ['**/*.svelte'],
+		languageOptions: {
+			parserOptions: {
+				parser: ts.parser,
+			},
 		},
-
+	},
+	{
+		ignores: ['build/', '.svelte-kit/', 'package/'],
+	},
+	{
 		rules: {
-			...prettier.rules,
-			...svelte.configs.recommended.rules,
 			'@typescript-eslint/no-unused-vars': 'warn',
 			'@typescript-eslint/no-explicit-any': 'warn',
 			'@typescript-eslint/ban-ts-comment': 'warn',
-			'prefer-const': 'error',
+			'prefer-const': 'warn',
 			'svelte/valid-compile': 'warn',
 		},
 	},
