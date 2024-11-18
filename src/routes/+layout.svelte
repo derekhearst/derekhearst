@@ -61,7 +61,6 @@
 	<nav class="flex items-center gap-4 underline md:text-2xl">
 		<a href="#projects">Projects</a>
 		<a href="https://github.com/derekhearst" target="_blank" rel="noreferrer">GitHub</a>
-		<a href="https://www.linkedin.com/in/derekhearst/" target="_blank" rel="noreferrer">LinkedIn</a>
 	</nav>
 	<nav class="ml-auto">
 		<button class="cursor-pointer" on:click={tryLogin}> Login </button>
