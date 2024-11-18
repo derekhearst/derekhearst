@@ -22,7 +22,7 @@
 			<a class="underline underline-offset-2" href="mailto:derekallenhearst@gmail.com"> derekallenhearst@gmail.com </a>
 		</p>
 	</div>
-	<img src="/derek.webp" alt="Derek Hearst" class="w-52 rounded-full border-2 border-lime-400" />
+	<img src="/derek.jpg" alt="Derek Hearst" class="w-52 rounded-full border-2 border-lime-400" />
 </body>
 
 <body id="aboutme" class="flex flex-col items-center gap-10 bg-zinc-900 p-4 py-9 pt-32 text-white md:pt-4">
