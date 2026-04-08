@@ -18,5 +18,8 @@ Check out my website for more information
 
 <hr/>
 <p align="center">
-  <img src="https://github-readme-stats-fast.vercel.app/api?username=DerekHearst&show_icons=true&theme=gruvbox" alt="GitHub Stats" height="195" /><img src="https://github-readme-stats-fast.vercel.app/api/streak?username=DerekHearst&theme=gruvbox" alt="GitHub Streak" height="195" /><img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=DerekHearst&layout=compact&theme=gruvbox" alt="Top Languages" height="195" />
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=DerekHearst&show_icons=true&theme=gruvbox" alt="GitHub Stats" /><img src="https://github-readme-stats-fast.vercel.app/api/streak?username=DerekHearst&theme=gruvbox" alt="GitHub Streak" />
+</p>
+<p align="center">
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=DerekHearst&layout=compact&theme=gruvbox" alt="Top Languages" />
 </p>
