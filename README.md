@@ -19,7 +19,7 @@ Check out my website for more information
 <hr/>
 
 <div>
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=derekhearst&theme=transparent&hide_border=true&title_color=9EE61F&text_color=ffffff&show_icons=true&icon_color=9EE61F&text_bold=false" width=440 />  
-  
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=derekhearst&layout=compact&theme=transparent&title_color=9EE61F&text_color=ffffff&text_bold=false&hide_border=true" width=380 />
+![GitHub Stats](https://github-readme-stats-fast.vercel.app/api?username=DerekHearst&show_icons=true&theme=gruvbox)
+![GitHub Stats](https://github-readme-stats-fast.vercel.app/api/streak?username=DerekHearst&theme=gruvbox)
+![GitHub Stats](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=DerekHearst&layout=compact&theme=gruvbox)
 </div>
