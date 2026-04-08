@@ -19,7 +19,7 @@ Check out my website for more information
 <hr/>
 
 <div>
-![GitHub Stats](https://github-readme-stats-fast.vercel.app/api?username=DerekHearst&show_icons=true&theme=gruvbox)
-![GitHub Stats](https://github-readme-stats-fast.vercel.app/api/streak?username=DerekHearst&theme=gruvbox)
-![GitHub Stats](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=DerekHearst&layout=compact&theme=gruvbox)
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=DerekHearst&show_icons=true&theme=gruvbox" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/streak?username=DerekHearst&theme=gruvbox" alt="GitHub Streak" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=DerekHearst&layout=compact&theme=gruvbox" alt="Top Languages" />
 </div>
