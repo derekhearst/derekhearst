@@ -3,6 +3,12 @@
 
 	let showSmokey = $state(false)
 
+	const aiStats = [
+		{ value: '2,700+', label: 'commits on my own projects since August, about 90% written with Claude' },
+		{ value: '6 weeks', label: 'to 2,400 commits on a co-op VR game, from the very first one' },
+		{ value: '3×', label: 'my monthly output at work after adopting Claude Code' },
+	]
+
 	const efoilThread =
 		'https://foil.zone/t/dereks-first-efoil-build-65161-75200-gong-v2-14s9p-diy-from-boise/26247'
 
@@ -63,7 +69,7 @@
 	<title>Derek Hearst</title>
 	<meta
 		name="description"
-		content="Derek Hearst is a developer and maker in Boise, Idaho. He builds software for a living, and electric hydrofoils, VR games and AI agents for fun." />
+		content="Derek Hearst is a developer and maker in Boise, Idaho who builds whatever he wants: software, an electric hydrofoil, a VR game and AI agents, with AI multiplying his output." />
 	<meta property="og:title" content="Derek Hearst" />
 	<meta property="og:description" content="Developer and maker in Boise, Idaho." />
 	<meta property="og:image" content="https://derekhearst.com/derek.webp" />
@@ -80,13 +86,15 @@
 		<div class="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-[1fr_auto] md:py-24">
 			<div class="flex flex-col gap-6">
 				<p class="flex items-center gap-2 font-mono text-sm text-accent">
-					<Icon name="pin" class="size-4" />Boise, Idaho
+					<Icon name="pin" class="size-4" />Boise, Idaho · Developer · Maker
 				</p>
-				<h1 class="text-4xl font-semibold tracking-tight text-white sm:text-6xl">Hi, I’m Derek.</h1>
+				<h1 class="text-4xl font-semibold tracking-tight text-balance text-white sm:text-6xl">
+					Hi, I’m Derek. <span class="block text-accent">I build whatever I want.</span>
+				</h1>
 				<p class="max-w-2xl text-xl text-pretty">
-					I’m a developer who can’t stop building things. I write software for a living, and in my spare time I build
-					just about everything else: an electric hydrofoil, a VR submarine game, and AI agents that run on my home
-					server.
+					If I want something to exist, I figure out how to make it: software, an electric hydrofoil, a VR game, a home
+					server full of AI agents. AI is the best tool I’ve ever had for it, because it lets one person build like a
+					whole team.
 				</p>
 				<div class="flex flex-wrap gap-3">
 					<a
@@ -126,9 +134,10 @@
 					wanted to do this full time. Boise CodeWorks turned that into a career in web development.
 				</p>
 				<p>
-					I’m happiest when I’m making something, whether it’s with a keyboard, a 3D printer or a sheet of fiberglass.
-					Right now that means the second version of my eFoil, a co-op VR game I’m building with a lot of help from
-					AI agents, and a home server that keeps growing new jobs.
+					My rule is simple: if I want something and it doesn’t exist, or costs too much, I build it. That’s how I ended
+					up shaping and glassing my own eFoil with zero foiling experience, welding its battery pack, and designing the
+					next version as code that draws its own CNC plans. I rarely know how to do the thing when I start. I figure it
+					out on the way, with a keyboard, a 3D printer or a sheet of fiberglass.
 				</p>
 				<p>
 					When I’m not building, I’m out on the water at Lucky Peak, playing ping pong or video games, reading science
@@ -151,8 +160,30 @@
 		</div>
 	</section>
 
+	<!-- AI -->
+	<section id="ai" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+		<h2 class="font-mono text-sm tracking-widest text-accent uppercase">Building with AI</h2>
+		<p class="mt-2 max-w-3xl text-3xl font-semibold tracking-tight text-balance text-white">
+			AI turned my side projects from someday into this weekend.
+		</p>
+		<p class="mt-5 max-w-3xl text-lg leading-relaxed">
+			I love AI because it multiplies what one person can make. I decide what to build, set the direction, and review
+			and test everything. Claude agents do a lot of the typing, often on my home server while I’m doing something
+			else. It means I can chase every idea instead of picking one.
+		</p>
+		<dl class="mt-10 grid gap-4 sm:grid-cols-3">
+			{#each aiStats as stat (stat.label)}
+				<div class="rounded-2xl border border-white/5 bg-zinc-900/60 p-6">
+					<dt class="sr-only">{stat.label}</dt>
+					<dd class="font-mono text-3xl font-semibold text-white">{stat.value}</dd>
+					<dd class="mt-2 text-sm leading-relaxed text-zinc-400">{stat.label}</dd>
+				</div>
+			{/each}
+		</dl>
+	</section>
+
 	<!-- eFoil -->
-	<section id="efoil" class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-[2fr_3fr]">
+	<section id="efoil" class="mx-auto grid border-t border-white/5 max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-[2fr_3fr]">
 		<figure class="flex flex-col gap-3">
 			<img
 				src="/efoil.webp"
