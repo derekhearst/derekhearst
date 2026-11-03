@@ -3,77 +3,8 @@
 
 	let showSmokey = $state(false)
 
-	const stats = [
-		{ value: '2,500+', label: 'employees use my portal each month' },
-		{ value: '250K+', label: 'requests a month to the data API I built' },
-		{ value: '5', label: 'production apps built from scratch' },
-		{ value: '3×', label: 'monthly output after adopting Claude Code' },
-	]
-
-	const work = [
-		{
-			title: 'Workforce and safety platform',
-			body: 'The company’s largest internal app, used daily at job sites: timekeeping to replace the legacy payroll system, safety management, certifications, about 135 reports, and client reporting for Shell, Lubrizol, Celanese and CF Industries.',
-			tags: ['SvelteKit', 'PostgreSQL', 'Playwright'],
-		},
-		{
-			title: 'Payroll rules engine',
-			body: 'Turned hard-coded payroll rules into 69 configurable rules across 250+ business units. Authorized users change them in an audited grid, so rule changes no longer need a code deploy.',
-			tags: ['Rules engine', 'Legacy migration'],
-		},
-		{
-			title: 'Central data API',
-			body: 'Supplies employee, business unit, cost code and work order data from JD Edwards and Microsoft Fabric to every internal app. Handles 250,000+ requests a month through a typed npm client.',
-			tags: ['REST', 'JD Edwards', 'Microsoft Fabric'],
-		},
-		{
-			title: 'Employee self-service portal',
-			body: 'My first project there, now used by 2,500+ employees a month for card and reimbursement requests, mobile devices, IT scheduling and safety forms.',
-			tags: ['SvelteKit', 'Temporal', 'Entra ID'],
-		},
-		{
-			title: 'AI development platform',
-			body: 'A knowledge base and Claude Code plugin with skills, hooks and MCP servers, used company-wide so every developer’s AI assistant works from the same docs and standards.',
-			tags: ['Claude Code', 'MCP', 'RAG'],
-		},
-		{
-			title: 'Delivery and monitoring',
-			body: 'Moved 11 apps to GitHub Actions with signed images, made tests and reviewed migrations standard, and rolled out Sentry monitoring across every app.',
-			tags: ['GitHub Actions', 'Docker', 'Sentry'],
-		},
-	]
-
-	type Project = { name: string; tagline: string; body: string; tags: string[]; href?: string; status?: string }
-	const projects: Project[] = [
-		{
-			name: 'The Merrow Deep',
-			tagline: 'Co-op VR submarine game',
-			body: 'A 1–4 player co-op VR game in Godot 4 for PCVR, with a host-run tactical simulation, sonar and noise modeling, and crew-versus-crew play where each team sees only its own sensors. About 2,400 commits since September 2026, mostly written with Claude agents.',
-			tags: ['Godot 4', 'GDScript', 'OpenXR', 'Multiplayer'],
-			status: 'In development',
-		},
-		{
-			name: 'FoundryAI',
-			tagline: 'AI game-master assistant for Foundry VTT',
-			body: 'Open-source module with streaming chat, retrieval over the game world from a client-side vector store, 40+ AI tools for tokens, combat, dice and audio, NPC roleplay and session recaps.',
-			tags: ['TypeScript', 'Svelte', 'RAG', 'OpenRouter'],
-			href: 'https://github.com/derekhearst/FoundryAI',
-		},
-		{
-			name: 'agent-runner',
-			tagline: 'Issue-to-PR coding agents',
-			body: 'Label a GitHub issue and a Claude Managed Agent works it on my home server and opens a pull request, with budget caps, session recovery and every outcome reported on the issue.',
-			tags: ['Claude Agents', 'Docker', 'GitHub'],
-			href: 'https://github.com/derekhearst/agent-runner',
-		},
-		{
-			name: 'SimpleSvelte',
-			tagline: 'UI component library',
-			body: 'The component library behind my company’s internal apps. 141 releases on npm, used by 6 apps.',
-			tags: ['Svelte 5', 'Tailwind CSS', 'npm'],
-			href: 'https://github.com/derekhearst/SimpleSvelte',
-		},
-	]
+	const efoilThread =
+		'https://foil.zone/t/dereks-first-efoil-build-65161-75200-gong-v2-14s9p-diy-from-boise/26247'
 
 	const efoilFacts = [
 		{ label: 'Board', value: 'Hand-built foam and fiberglass, 1.6 m' },
@@ -82,50 +13,59 @@
 		{ label: 'Takeoff', value: '4.2 kW measured from ride logs' },
 	]
 
-	const experience = [
+	type Project = { name: string; tagline: string; body: string; tags: string[]; href?: string; status?: string }
+	const projects: Project[] = [
 		{
-			role: 'Lead Web Developer',
-			org: 'Brown & Root Industrial Services',
-			when: 'Jan 2025 – Present',
-			body: 'Lead internal app development for HR, Payroll, Safety, Procurement, Finance and Project Controls, from requirements with business owners through release and support.',
+			name: 'The Merrow Deep',
+			tagline: 'Co-op VR submarine game',
+			body: 'A 1–4 player co-op VR game in Godot 4 for PCVR. You crew a diesel-electric submarine, hunt convoys and dodge destroyers, and in crew-versus-crew matches each team sees only its own sonar. About 2,400 commits since September, mostly written with Claude agents.',
+			tags: ['Godot 4', 'GDScript', 'OpenXR', 'Multiplayer'],
+			status: 'In development',
 		},
 		{
-			role: 'Full-Stack Web Developer',
-			org: 'Brown & Root Industrial Services',
-			when: 'Feb 2023 – Jan 2025',
-			body: 'Built the employee portal and the procurement and equipment system from scratch, and launched the field operations platform.',
+			name: 'FoundryAI',
+			tagline: 'AI game-master assistant for Foundry VTT',
+			body: 'An open-source module for running tabletop games: streaming chat that knows your game world, 40+ AI tools for tokens, combat, dice and audio, NPC roleplay and session recaps.',
+			tags: ['TypeScript', 'Svelte', 'RAG', 'OpenRouter'],
+			href: 'https://github.com/derekhearst/FoundryAI',
 		},
 		{
-			role: 'Software Engineer',
-			org: 'HP',
-			when: 'Aug 2021 – Aug 2022',
-			body: 'Built C# printer test and automation software, led specification meetings, and supported beta customers on site.',
+			name: 'agent-runner',
+			tagline: 'Issue-to-PR coding agents',
+			body: 'Label a GitHub issue and a Claude agent works it on my home server and opens a pull request, with budget caps, session recovery and every outcome reported back on the issue.',
+			tags: ['Claude Agents', 'Docker', 'GitHub'],
+			href: 'https://github.com/derekhearst/agent-runner',
 		},
 		{
-			role: 'Full-Stack Web Development Certificate',
-			org: 'Boise CodeWorks',
-			when: 'Aug 2022 – Feb 2023',
-			body: 'Earned the “Golden Duck” award for a perfect score on every assignment.',
+			name: 'SimpleSvelte',
+			tagline: 'UI component library',
+			body: 'The component library behind the internal apps I build at work. 141 releases on npm, used by 6 apps.',
+			tags: ['Svelte 5', 'Tailwind CSS', 'npm'],
+			href: 'https://github.com/derekhearst/SimpleSvelte',
 		},
 	]
 
-	const skills = [
-		{ group: 'Languages', items: ['TypeScript', 'JavaScript', 'SQL', 'C#', 'GDScript', 'Python'] },
-		{ group: 'Frameworks', items: ['SvelteKit', 'Svelte', 'Node.js', 'Bun', 'ASP.NET'] },
-		{ group: 'Data', items: ['PostgreSQL', 'SQL Server', 'Prisma', 'Drizzle', 'Redis', 'JD Edwards'] },
-		{ group: 'Cloud and DevOps', items: ['Azure', 'Docker', 'GitHub Actions', 'Temporal', 'Sentry', 'Cloudflare'] },
-		{ group: 'AI', items: ['Claude Code', 'MCP servers', 'RAG', 'pgvector', 'OpenAI'] },
-		{ group: 'Game development', items: ['Godot 4', 'OpenXR', 'Multiplayer', 'Blender'] },
+	const highlights = [
+		{ value: '2,500+', label: 'employees a month use the self-service portal I built' },
+		{ value: '250K+', label: 'requests a month to the data API behind every internal app' },
+		{ value: '5', label: 'production apps built from scratch, from payroll to job-site safety' },
+	]
+
+	const experience = [
+		{ role: 'Lead Web Developer', org: 'Brown & Root Industrial Services', when: '2025 – Present' },
+		{ role: 'Full-Stack Web Developer', org: 'Brown & Root Industrial Services', when: '2023 – 2025' },
+		{ role: 'Full-Stack Web Development Certificate', org: 'Boise CodeWorks', when: '2022 – 2023' },
+		{ role: 'Software Engineer', org: 'HP', when: '2021 – 2022' },
 	]
 </script>
 
 <svelte:head>
-	<title>Derek Hearst · Lead Full-Stack Developer</title>
+	<title>Derek Hearst</title>
 	<meta
 		name="description"
-		content="Derek Hearst is a lead full-stack developer in Boise, Idaho, building internal software for a 10,000-employee industrial contractor with SvelteKit, TypeScript and AI-assisted development." />
-	<meta property="og:title" content="Derek Hearst · Lead Full-Stack Developer" />
-	<meta property="og:description" content="Internal apps, data APIs and AI-assisted development. Boise, Idaho." />
+		content="Derek Hearst is a developer and maker in Boise, Idaho. He builds software for a living, and electric hydrofoils, VR games and AI agents for fun." />
+	<meta property="og:title" content="Derek Hearst" />
+	<meta property="og:description" content="Developer and maker in Boise, Idaho." />
 	<meta property="og:image" content="https://derekhearst.com/derek.webp" />
 	<meta property="og:url" content="https://derekhearst.com" />
 	<meta name="author" content="Derek Hearst" />
@@ -140,26 +80,19 @@
 		<div class="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-[1fr_auto] md:py-24">
 			<div class="flex flex-col gap-6">
 				<p class="flex items-center gap-2 font-mono text-sm text-accent">
-					<Icon name="pin" class="size-4" />Boise, Idaho · Lead Full-Stack Developer
+					<Icon name="pin" class="size-4" />Boise, Idaho
 				</p>
-				<h1 class="max-w-2xl text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-					I build the internal software a <span class="whitespace-nowrap">10,000-person</span> company runs on.
-				</h1>
-				<p class="max-w-2xl text-lg text-pretty">
-					At Brown & Root Industrial Services I’ve built five production apps from scratch, including an employee
-					portal used by 2,500+ people a month and the data API behind every internal app. I work directly with the
-					business, run delivery end to end, and use AI-assisted development to ship a lot more of it.
+				<h1 class="text-4xl font-semibold tracking-tight text-white sm:text-6xl">Hi, I’m Derek.</h1>
+				<p class="max-w-2xl text-xl text-pretty">
+					I’m a developer who can’t stop building things. I write software for a living, and in my spare time I build
+					just about everything else: an electric hydrofoil, a VR submarine game, and AI agents that run on my home
+					server.
 				</p>
 				<div class="flex flex-wrap gap-3">
 					<a
 						href="mailto:derekallenhearst@gmail.com"
 						class="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 font-medium text-zinc-950 transition hover:brightness-110">
-						<Icon name="mail" class="size-4" />Email me
-					</a>
-					<a
-						href="/Derek_Hearst_Resume.pdf"
-						class="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-white transition hover:border-white/40">
-						<Icon name="file" class="size-4" />Resume
+						<Icon name="mail" class="size-4" />Say hi
 					</a>
 					<a
 						href="https://github.com/derekhearst"
@@ -182,35 +115,90 @@
 		</div>
 	</section>
 
-	<!-- Numbers -->
-	<section class="border-y border-white/5 bg-zinc-900/40">
-		<dl class="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-10 sm:px-6 md:grid-cols-4">
-			{#each stats as stat (stat.label)}
-				<div>
-					<dt class="sr-only">{stat.label}</dt>
-					<dd class="font-mono text-3xl font-semibold text-white sm:text-4xl">{stat.value}</dd>
-					<dd class="mt-1 text-sm text-zinc-400">{stat.label}</dd>
-				</div>
-			{/each}
-		</dl>
+	<!-- About -->
+	<section id="about" class="border-t border-white/5 bg-zinc-900/30">
+		<div class="mx-auto max-w-3xl px-4 py-20 sm:px-6">
+			<h2 class="font-mono text-sm tracking-widest text-accent uppercase">About me</h2>
+			<div class="mt-6 flex flex-col gap-5 text-lg leading-relaxed">
+				<p>
+					I got into programming by making addons and maps for Garry’s Mod in Lua. That led to software classes in high
+					school, computer science in college, and building tools for my coworkers at HP, which is when I realized I
+					wanted to do this full time. Boise CodeWorks turned that into a career in web development.
+				</p>
+				<p>
+					I’m happiest when I’m making something, whether it’s with a keyboard, a 3D printer or a sheet of fiberglass.
+					Right now that means the second version of my eFoil, a co-op VR game I’m building with a lot of help from
+					AI agents, and a home server that keeps growing new jobs.
+				</p>
+				<p>
+					When I’m not building, I’m out on the water at Lucky Peak, playing ping pong or video games, reading science
+					fiction, or hanging out with my cat
+					<button
+						type="button"
+						class="cursor-pointer font-semibold text-white underline decoration-accent underline-offset-4"
+						aria-expanded={showSmokey}
+						onclick={() => (showSmokey = !showSmokey)}>Smokey</button
+					>, who I rescued off the street as a kitten.
+				</p>
+				{#if showSmokey}
+					<img
+						src="/smokey.webp"
+						alt="My cat Smokey"
+						loading="lazy"
+						class="w-full max-w-md self-center rounded-2xl ring-1 ring-white/10" />
+				{/if}
+			</div>
+		</div>
 	</section>
 
-	<!-- Work -->
-	<section id="work" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-		<h2 class="font-mono text-sm tracking-widest text-accent uppercase">Work</h2>
-		<p class="mt-2 max-w-2xl text-3xl font-semibold tracking-tight text-white">What I build at Brown & Root</p>
-		<div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-			{#each work as item (item.title)}
-				<article class="flex flex-col gap-3 rounded-2xl border border-white/5 bg-zinc-900/60 p-6">
-					<h3 class="text-lg font-semibold text-white">{item.title}</h3>
-					<p class="grow text-sm leading-relaxed">{item.body}</p>
-					<ul class="flex flex-wrap gap-1.5">
-						{#each item.tags as tag (tag)}
-							<li class="rounded-full bg-white/5 px-2.5 py-0.5 font-mono text-xs text-zinc-400">{tag}</li>
-						{/each}
-					</ul>
-				</article>
-			{/each}
+	<!-- eFoil -->
+	<section id="efoil" class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-[2fr_3fr]">
+		<figure class="flex flex-col gap-3">
+			<img
+				src="/efoil.webp"
+				alt="Derek and his dad carrying his homebuilt eFoil down a boat ramp"
+				width="692"
+				height="919"
+				loading="lazy"
+				class="aspect-[4/5] w-full rounded-2xl object-cover object-bottom ring-1 ring-white/10" />
+			<figcaption class="text-center text-sm text-zinc-500">
+				Carrying V1 down to the water at Lucky Peak with my dad.
+			</figcaption>
+		</figure>
+		<div class="flex flex-col gap-5">
+			<h2 class="font-mono text-sm tracking-widest text-accent uppercase">The eFoil</h2>
+			<p class="text-3xl font-semibold tracking-tight text-white">I built my own electric hydrofoil.</p>
+			<p class="leading-relaxed">
+				An eFoil is a surfboard with an electric motor on a hydrofoil wing, so it lifts off the water and flies a
+				couple of feet above it. I started with zero foiling experience and only hand tools. I shaped and glassed the
+				board, welded the battery pack, printed the propeller, and tuned the motor controller from my own ride logs.
+				V1 is built and riding.
+			</p>
+			<dl class="grid gap-3 sm:grid-cols-2">
+				{#each efoilFacts as fact (fact.label)}
+					<div class="rounded-xl border border-white/5 bg-zinc-900/60 p-4">
+						<dt class="font-mono text-xs text-zinc-500 uppercase">{fact.label}</dt>
+						<dd class="mt-1 text-sm text-white">{fact.value}</dd>
+					</div>
+				{/each}
+			</dl>
+			<p class="leading-relaxed">
+				I documented the whole build on foil.zone, the DIY eFoil forum, where experienced builders helped shape it.
+				Version 2 is designed in code: a parametric Blender model that generates its own CNC drawings, cutting
+				patterns, fiberglass templates and a fully sourced bill of materials.
+			</p>
+			<div class="flex flex-wrap gap-3">
+				<a
+					href={efoilThread}
+					class="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-medium text-zinc-950 transition hover:brightness-110">
+					Read the build thread <Icon name="external" class="size-4" />
+				</a>
+				<a
+					href="https://github.com/derekhearst/efoil-v2"
+					class="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-white transition hover:border-white/40">
+					<Icon name="github" class="size-4" />V2 model on GitHub
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -218,7 +206,7 @@
 	<section id="projects" class="border-t border-white/5 bg-zinc-900/30">
 		<div class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
 			<h2 class="font-mono text-sm tracking-widest text-accent uppercase">Projects</h2>
-			<p class="mt-2 max-w-2xl text-3xl font-semibold tracking-tight text-white">Things I build on my own time</p>
+			<p class="mt-2 max-w-2xl text-3xl font-semibold tracking-tight text-white">Other things I’m building</p>
 			<div class="mt-10 grid gap-4 md:grid-cols-2">
 				{#each projects as project (project.name)}
 					<article
@@ -254,109 +242,40 @@
 		</div>
 	</section>
 
-	<!-- eFoil -->
-	<section id="efoil" class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-[2fr_3fr]">
-		<figure class="flex flex-col gap-3">
-			<img
-				src="/efoil.webp"
-				alt="Derek and his dad carrying his homebuilt eFoil down a boat ramp"
-				width="692"
-				height="919"
-				loading="lazy"
-				class="aspect-[4/5] w-full rounded-2xl object-cover object-bottom ring-1 ring-white/10" />
-			<figcaption class="text-center text-sm text-zinc-500">Carrying V1 down to the water with my dad.</figcaption>
-		</figure>
+	<!-- Work -->
+	<section id="work" class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[3fr_2fr]">
 		<div class="flex flex-col gap-5">
-			<h2 class="font-mono text-sm tracking-widest text-accent uppercase">Off the keyboard</h2>
-			<p class="text-3xl font-semibold tracking-tight text-white">I built my own electric hydrofoil.</p>
+			<h2 class="font-mono text-sm tracking-widest text-accent uppercase">By day</h2>
+			<p class="text-3xl font-semibold tracking-tight text-white">Lead web developer at Brown & Root</p>
 			<p class="leading-relaxed">
-				An eFoil is a surfboard with an electric motor on a hydrofoil wing, so it lifts off the water and flies a
-				couple of feet above it. My first board is built and riding: I shaped and glassed the board, welded the
-				battery pack, printed the propeller, and tuned the motor controller from my own ride logs.
+				I build the internal software that a 10,000-person industrial contractor runs on, from payroll and timekeeping
+				to job-site safety, working directly with the people who use it.
 			</p>
-			<dl class="grid gap-3 sm:grid-cols-2">
-				{#each efoilFacts as fact (fact.label)}
+			<dl class="grid gap-3 sm:grid-cols-3">
+				{#each highlights as item (item.label)}
 					<div class="rounded-xl border border-white/5 bg-zinc-900/60 p-4">
-						<dt class="font-mono text-xs text-zinc-500 uppercase">{fact.label}</dt>
-						<dd class="mt-1 text-sm text-white">{fact.value}</dd>
+						<dt class="sr-only">{item.label}</dt>
+						<dd class="font-mono text-2xl font-semibold text-white">{item.value}</dd>
+						<dd class="mt-1 text-sm text-zinc-400">{item.label}</dd>
 					</div>
 				{/each}
 			</dl>
-			<p class="leading-relaxed">
-				Version 2 is designed in code: a parametric Blender model that generates its own CNC drawings, cutting
-				patterns, fiberglass templates and a fully sourced bill of materials. Change one dimension and every
-				document updates with it.
-			</p>
 			<a
-				href="https://github.com/derekhearst/efoil-v2"
-				class="inline-flex items-center gap-2 self-start text-sm text-accent hover:underline">
-				See the V2 model on GitHub <Icon name="external" class="size-4" />
+				href="/Derek_Hearst_Resume.pdf"
+				class="inline-flex items-center gap-2 self-start rounded-full border border-accent/40 px-4 py-2 text-sm text-accent transition hover:bg-accent hover:text-zinc-950">
+				<Icon name="file" class="size-4" />Full details in my resume
 			</a>
 		</div>
-	</section>
-
-	<!-- Experience and skills -->
-	<section id="experience" class="mx-auto grid max-w-6xl gap-14 px-4 py-20 sm:px-6 lg:grid-cols-[3fr_2fr]">
-		<div>
-			<h2 class="font-mono text-sm tracking-widest text-accent uppercase">Experience</h2>
-			<ol class="mt-8 flex flex-col gap-8 border-l border-white/10 pl-6">
-				{#each experience as job (job.role)}
-					<li class="relative">
-						<span class="absolute top-1.5 -left-[1.82rem] size-2.5 rounded-full bg-accent ring-4 ring-zinc-950"></span>
-						<p class="font-mono text-xs text-zinc-500">{job.when}</p>
-						<h3 class="mt-1 font-semibold text-white">{job.role}</h3>
-						<p class="text-sm text-zinc-400">{job.org}</p>
-						<p class="mt-2 text-sm leading-relaxed">{job.body}</p>
-					</li>
-				{/each}
-			</ol>
-		</div>
-		<div>
-			<h2 class="font-mono text-sm tracking-widest text-accent uppercase">Skills</h2>
-			<dl class="mt-8 flex flex-col gap-5">
-				{#each skills as skill (skill.group)}
-					<div>
-						<dt class="text-sm font-medium text-white">{skill.group}</dt>
-						<dd class="mt-2 flex flex-wrap gap-1.5">
-							{#each skill.items as item (item)}
-								<span class="rounded-full border border-white/10 px-2.5 py-0.5 text-xs">{item}</span>
-							{/each}
-						</dd>
-					</div>
-				{/each}
-			</dl>
-		</div>
-	</section>
-
-	<!-- About -->
-	<section id="about" class="border-t border-white/5 bg-zinc-900/30">
-		<div class="mx-auto max-w-3xl px-4 py-20 sm:px-6">
-			<h2 class="font-mono text-sm tracking-widest text-accent uppercase">About</h2>
-			<div class="mt-6 flex flex-col gap-5 text-lg leading-relaxed">
-				<p>
-					I got into programming by making addons and maps for Garry’s Mod in Lua. That led to software classes in high
-					school, computer science in college, and building tools for my coworkers at HP, which is when I realized I
-					wanted to do this full time. Boise CodeWorks turned that into web development.
-				</p>
-				<p>
-					Outside work I’m usually building something: a VR submarine game, AI agents that run on my home server, or the
-					next version of my eFoil. I also love ping pong, video games, science fiction, and my cat
-					<button
-						type="button"
-						class="cursor-pointer font-semibold text-white underline decoration-accent underline-offset-4"
-						aria-expanded={showSmokey}
-						onclick={() => (showSmokey = !showSmokey)}>Smokey</button
-					>, who I rescued off the street as a kitten.
-				</p>
-				{#if showSmokey}
-					<img
-						src="/smokey.webp"
-						alt="My cat Smokey"
-						loading="lazy"
-						class="w-full max-w-md self-center rounded-2xl ring-1 ring-white/10" />
-				{/if}
-			</div>
-		</div>
+		<ol class="flex flex-col gap-6 self-center border-l border-white/10 pl-6">
+			{#each experience as job (job.role)}
+				<li class="relative">
+					<span class="absolute top-1.5 -left-[1.82rem] size-2.5 rounded-full bg-accent ring-4 ring-zinc-950"></span>
+					<p class="font-mono text-xs text-zinc-500">{job.when}</p>
+					<h3 class="mt-1 font-semibold text-white">{job.role}</h3>
+					<p class="text-sm text-zinc-400">{job.org}</p>
+				</li>
+			{/each}
+		</ol>
 	</section>
 </main>
 

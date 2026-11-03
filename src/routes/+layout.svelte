@@ -5,11 +5,10 @@
 	let { children } = $props()
 
 	const links = [
-		{ href: '#work', label: 'Work' },
-		{ href: '#projects', label: 'Projects' },
-		{ href: '#efoil', label: 'eFoil' },
-		{ href: '#experience', label: 'Experience' },
 		{ href: '#about', label: 'About' },
+		{ href: '#efoil', label: 'eFoil' },
+		{ href: '#projects', label: 'Projects' },
+		{ href: '#work', label: 'Work' },
 	]
 </script>
 
