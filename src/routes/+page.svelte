@@ -65,9 +65,9 @@
 	<title>Derek Hearst</title>
 	<meta
 		name="description"
-		content="Derek Hearst is a developer and maker in Boise, Idaho who builds whatever he wants: software, an electric hydrofoil, a VR game and AI agents." />
+		content="Derek Hearst is a developer and maker in Boise, Idaho who likes building things: software, an electric hydrofoil, a VR game and AI agents." />
 	<meta property="og:title" content="Derek Hearst" />
-	<meta property="og:description" content="I build whatever I want: software, an electric hydrofoil, a VR game, and a home server full of AI agents." />
+	<meta property="og:description" content="I like building things: software, an electric hydrofoil, a VR game, and a home server full of AI agents." />
 	<meta property="og:image" content="https://derekhearst.com/og.png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
@@ -89,7 +89,7 @@
 					<Icon name="pin" class="size-4" />Boise, Idaho · Developer · Maker
 				</p>
 				<h1 class="text-4xl font-semibold tracking-tight text-balance text-white sm:text-6xl">
-					Hi, I’m Derek. <span class="block text-accent">I build whatever I want.</span>
+					Hi, I’m Derek. <span class="block text-accent">I like building things.</span>
 				</h1>
 				<p class="max-w-2xl text-xl text-pretty">
 					If I want something to exist, I figure out how to make it: software, an electric hydrofoil, a VR game, a home

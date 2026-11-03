@@ -1,7 +1,7 @@
 <h1 align=center>Hi, I'm Derek Hearst</h1>
-<h4 align=center>I build whatever I want · <a href="https://derekhearst.com">derekhearst.com</a></h4>
+<h4 align=center>I like building things · <a href="https://derekhearst.com">derekhearst.com</a></h4>
 
-I'm a developer and maker in Boise, Idaho. By day I'm the lead web developer at Brown & Root Industrial Services, building the internal apps a 10,000-person company runs on. The rest of the time I build whatever I want: a homebuilt electric hydrofoil, a co-op VR submarine game, and a home server full of AI agents.
+I'm a developer and maker in Boise, Idaho. By day I'm the lead web developer at Brown & Root Industrial Services, building the internal apps a 10,000-person company runs on. The rest of the time I build my own projects: a homebuilt electric hydrofoil, a co-op VR submarine game, and a home server full of AI agents.
 
 #### What I'm building
 
