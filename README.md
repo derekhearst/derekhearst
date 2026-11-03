@@ -1,20 +1,21 @@
-<h1 align=center> Hello, I'm Derek Hearst </h1>
-<h4 align=center> Web Developer <a href="https://derekhearst.com">www.derekhearst.com</a> </h4>
+<h1 align=center>Hi, I'm Derek Hearst</h1>
+<h4 align=center>I build whatever I want · <a href="https://derekhearst.com">derekhearst.com</a></h4>
 
-I'm a Full Stack Web Developer that's in love with Svelte. My interest in development started with game modding with Lua, leading me to web development and full stack development. I'm proficient Svelte, SvelteKit, TailwindCSS, Bun, Azure, Cloudflare, Docker, and various other libaries.
-Check out my website for more information
+I'm a developer and maker in Boise, Idaho. By day I'm the lead web developer at Brown & Root Industrial Services, building the internal apps a 10,000-person company runs on. The rest of the time I build whatever I want: a homebuilt electric hydrofoil, a co-op VR submarine game, and a home server full of AI agents.
 
-#### My Languages and Frameworks:
+I love AI because it multiplies what one person can make. Most of what I build now is written with Claude Code and Claude agents, with me setting the direction and reviewing and testing everything.
 
-<div>
-  <img src="https://cdn.cdnlogo.com/logos/s/6/svelte.svg" alt="svelte" width="80"  align="center"/>
-  <img src="https://cdn.cdnlogo.com/logos/t/96/typescript.svg" alt="typescript"  width="80" align=center />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" alt="tailwindcss" width="80" align="center"/>
-  <img src="https://bun.sh/logo.svg" alt="Bun" width="80" align="center">
-  <img src="https://www.cdnlogo.com/logos/d/41/docker.svg" alt="docker" width="80" align="center">
-  <img src="https://www.cdnlogo.com/logos/a/12/azure.svg" alt="docker" width="80" align="center">
-  <img src="https://www.cdnlogo.com/logos/c/5/cloudflare.svg" width="80" align="center">
-</div>
+#### What I'm building
+
+- [**efoil-v2**](https://github.com/derekhearst/efoil-v2) · a parametric Blender model of my eFoil that generates its own CNC drawings and bill of materials. V1 is built and riding ([build log](https://foil.zone/t/dereks-first-efoil-build-65161-75200-gong-v2-14s9p-diy-from-boise/26247)).
+- [**FoundryAI**](https://github.com/derekhearst/FoundryAI) · an AI game-master assistant for Foundry VTT.
+- [**agent-runner**](https://github.com/derekhearst/agent-runner) · label a GitHub issue and a Claude agent on my home server opens a pull request.
+- [**SimpleSvelte**](https://github.com/derekhearst/SimpleSvelte) · the Svelte 5 component library behind the apps I build at work.
+- **The Merrow Deep** · a co-op VR submarine game in Godot 4 (private for now).
+
+#### What I use
+
+TypeScript · SvelteKit · Svelte 5 · Bun · PostgreSQL · SQL Server · Azure · Cloudflare · Docker · Temporal · Claude Code · MCP · Godot · Blender
 
 <hr/>
 <p align="center">
@@ -24,3 +25,20 @@ Check out my website for more information
   <br/>
   <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=DerekHearst&layout=compact&theme=gruvbox" alt="Top Languages" />
 </p>
+
+<details>
+<summary>About this repo</summary>
+
+This repo is also the source for [derekhearst.com](https://derekhearst.com): a single prerendered page built with SvelteKit 3, Svelte 5 and Tailwind CSS 4. Every push to `master` deploys it through Cloudflare Pages.
+
+```bash
+bun install
+bun run dev      # local site at http://localhost:5173
+bun run build
+```
+
+- `scripts/export-efoil.py` exports the 3D eFoil model from the eFoil repo's Blender file to `static/efoil.glb`.
+- `scripts/make-images.sh` renders the link-preview image and favicons from `scripts/og.html`.
+- `.node-version` pins Node 22, because the Pages build image defaults to Node 18 and Vite 8 needs 20.19+.
+
+</details>

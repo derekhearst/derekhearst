@@ -1,16 +1,15 @@
-// See https://kit.svelte.dev/docs/types#app
-// for information about these interfaces
+// See https://svelte.dev/docs/kit/types#app
 declare global {
-	namespace App {
-		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
-		interface Platform {
-			env?: {
-				DB: D1Namespace
-			}
-		}
+	namespace App {}
+}
+
+// <model-viewer> custom element used by the 3D eFoil viewer.
+declare module 'svelte/elements' {
+	interface SvelteHTMLElements {
+		'model-viewer': HTMLAttributes<HTMLElement> & Record<string, unknown>
 	}
 }
+
+import type { HTMLAttributes } from 'svelte/elements'
 
 export {}

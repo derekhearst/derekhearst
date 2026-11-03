@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Icon from '#lib/Icon.svelte'
+	import EfoilModel from '#lib/EfoilModel.svelte'
 
 	let showSmokey = $state(false)
 
@@ -71,8 +72,12 @@
 		name="description"
 		content="Derek Hearst is a developer and maker in Boise, Idaho who builds whatever he wants: software, an electric hydrofoil, a VR game and AI agents, with AI multiplying his output." />
 	<meta property="og:title" content="Derek Hearst" />
-	<meta property="og:description" content="Developer and maker in Boise, Idaho." />
-	<meta property="og:image" content="https://derekhearst.com/derek.webp" />
+	<meta property="og:description" content="I build whatever I want: software, an electric hydrofoil, a VR game, and a home server full of AI agents." />
+	<meta property="og:image" content="https://derekhearst.com/og.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:url" content="https://derekhearst.com" />
 	<meta name="author" content="Derek Hearst" />
 </svelte:head>
@@ -156,6 +161,18 @@
 						loading="lazy"
 						class="w-full max-w-md self-center rounded-2xl ring-1 ring-white/10" />
 				{/if}
+				<figure class="mt-4 flex flex-col gap-3">
+					<img
+						src="/efoil.webp"
+						alt="Derek and his dad carrying his homebuilt eFoil down a boat ramp"
+						width="692"
+						height="919"
+						loading="lazy"
+						class="aspect-[4/3] w-full rounded-2xl object-cover object-bottom ring-1 ring-white/10" />
+					<figcaption class="text-center text-sm text-zinc-500">
+						Carrying the eFoil down to the water at Lucky Peak with my dad.
+					</figcaption>
+				</figure>
 			</div>
 		</div>
 	</section>
@@ -183,52 +200,79 @@
 	</section>
 
 	<!-- eFoil -->
-	<section id="efoil" class="mx-auto grid border-t border-white/5 max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-[2fr_3fr]">
-		<figure class="flex flex-col gap-3">
-			<img
-				src="/efoil.webp"
-				alt="Derek and his dad carrying his homebuilt eFoil down a boat ramp"
-				width="692"
-				height="919"
-				loading="lazy"
-				class="aspect-[4/5] w-full rounded-2xl object-cover object-bottom ring-1 ring-white/10" />
-			<figcaption class="text-center text-sm text-zinc-500">
-				Carrying V1 down to the water at Lucky Peak with my dad.
-			</figcaption>
-		</figure>
-		<div class="flex flex-col gap-5">
-			<h2 class="font-mono text-sm tracking-widest text-accent uppercase">The eFoil</h2>
-			<p class="text-3xl font-semibold tracking-tight text-white">I built my own electric hydrofoil.</p>
-			<p class="leading-relaxed">
-				An eFoil is a surfboard with an electric motor on a hydrofoil wing, so it lifts off the water and flies a
-				couple of feet above it. I started with zero foiling experience and only hand tools. I shaped and glassed the
-				board, welded the battery pack, printed the propeller, and tuned the motor controller from my own ride logs.
-				V1 is built and riding.
-			</p>
-			<dl class="grid gap-3 sm:grid-cols-2">
-				{#each efoilFacts as fact (fact.label)}
-					<div class="rounded-xl border border-white/5 bg-zinc-900/60 p-4">
-						<dt class="font-mono text-xs text-zinc-500 uppercase">{fact.label}</dt>
-						<dd class="mt-1 text-sm text-white">{fact.value}</dd>
-					</div>
-				{/each}
-			</dl>
-			<p class="leading-relaxed">
-				I documented the whole build on foil.zone, the DIY eFoil forum, where experienced builders helped shape it.
-				Version 2 is designed in code: a parametric Blender model that generates its own CNC drawings, cutting
-				patterns, fiberglass templates and a fully sourced bill of materials.
-			</p>
-			<div class="flex flex-wrap gap-3">
-				<a
-					href={efoilThread}
-					class="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-medium text-zinc-950 transition hover:brightness-110">
-					Read the build thread <Icon name="external" class="size-4" />
-				</a>
-				<a
-					href="https://github.com/derekhearst/efoil-v2"
-					class="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-white transition hover:border-white/40">
-					<Icon name="github" class="size-4" />V2 model on GitHub
-				</a>
+	<section id="efoil" class="border-t border-white/5">
+		<div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-[2fr_3fr]">
+			<figure class="flex flex-col gap-3">
+				<video
+					src="/efoil-ride.mp4"
+					poster="/efoil-ride.webp"
+					width="540"
+					height="674"
+					autoplay
+					muted
+					loop
+					playsinline
+					preload="metadata"
+					aria-label="Derek riding his homebuilt eFoil above the water"
+					class="aspect-[4/5] w-full rounded-2xl object-cover ring-1 ring-white/10"></video>
+				<figcaption class="text-center text-sm text-zinc-500">V1 flying at Lucky Peak.</figcaption>
+			</figure>
+			<div class="flex flex-col gap-5">
+				<h2 class="font-mono text-sm tracking-widest text-accent uppercase">The eFoil</h2>
+				<p class="text-3xl font-semibold tracking-tight text-white">I built my own electric hydrofoil.</p>
+				<p class="leading-relaxed">
+					An eFoil is a surfboard with an electric motor on a hydrofoil wing, so it lifts off the water and flies a
+					couple of feet above it. I started with zero foiling experience and only hand tools. I shaped and glassed the
+					board, welded the battery pack, printed the propeller, and tuned the motor controller from my own ride logs.
+				</p>
+				<dl class="grid gap-3 sm:grid-cols-2">
+					{#each efoilFacts as fact (fact.label)}
+						<div class="rounded-xl border border-white/5 bg-zinc-900/60 p-4">
+							<dt class="font-mono text-xs text-zinc-500 uppercase">{fact.label}</dt>
+							<dd class="mt-1 text-sm text-white">{fact.value}</dd>
+						</div>
+					{/each}
+				</dl>
+				<p class="leading-relaxed">
+					I logged the whole build on foil.zone, the DIY eFoil forum, where experienced builders helped shape it, and
+					kept detailed build notes along the way.
+				</p>
+				<div class="flex flex-wrap gap-3">
+					<a
+						href={efoilThread}
+						class="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-medium text-zinc-950 transition hover:brightness-110">
+						Read the build log <Icon name="external" class="size-4" />
+					</a>
+					<a
+						href="https://github.com/derekhearst/efoil-v2/tree/main/docs/v1"
+						class="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-white transition hover:border-white/40">
+						<Icon name="file" class="size-4" />V1 build notes
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- V2 in 3D -->
+		<div class="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+			<div class="grid overflow-hidden rounded-3xl border border-white/5 bg-zinc-900/40 lg:grid-cols-[3fr_2fr]">
+				<div
+					class="h-80 bg-[radial-gradient(circle_at_center,--theme(--color-accent/0.08),transparent_70%)] sm:h-[28rem]">
+					<EfoilModel />
+				</div>
+				<div class="flex flex-col justify-center gap-4 p-6 sm:p-8">
+					<h3 class="font-mono text-sm tracking-widest text-accent uppercase">Version 2, in 3D</h3>
+					<p class="text-2xl font-semibold tracking-tight text-white">Designed in code. Drag it to look around.</p>
+					<p class="leading-relaxed">
+						V2 is a parametric Blender model that generates its own CNC drawings, cutting patterns, fiberglass
+						templates and a fully sourced bill of materials. Change one dimension and every document updates with it.
+						This is the real model, straight from the repo.
+					</p>
+					<a
+						href="https://github.com/derekhearst/efoil-v2"
+						class="inline-flex items-center gap-2 self-start rounded-full border border-white/15 px-4 py-2 text-sm text-white transition hover:border-white/40">
+						<Icon name="github" class="size-4" />V2 model on GitHub
+					</a>
+				</div>
 			</div>
 		</div>
 	</section>

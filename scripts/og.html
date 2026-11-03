@@ -1,0 +1,124 @@
+<!doctype html>
+<!-- Source for static/og.png (the link-preview image) and the PNG favicons. Rendered by scripts/make-images.sh. -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			@font-face {
+				font-family: Inter;
+				src: url('../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2');
+				font-weight: 100 900;
+			}
+			@font-face {
+				font-family: Mono;
+				src: url('../node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2')
+					format('woff2');
+				font-weight: 100 900;
+			}
+			* {
+				margin: 0;
+				box-sizing: border-box;
+			}
+			body {
+				width: 1200px;
+				height: 630px;
+				background: #09090b;
+				font-family: Inter, sans-serif;
+				color: #d4d4d8;
+				overflow: hidden;
+			}
+			.og {
+				position: relative;
+				display: flex;
+				height: 100%;
+				background: radial-gradient(ellipse at top right, rgb(181 242 61 / 0.14), transparent 60%);
+			}
+			.text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 22px;
+				padding: 0 0 0 80px;
+				width: 760px;
+			}
+			.kicker {
+				font-family: Mono;
+				font-size: 24px;
+				color: #b5f23d;
+			}
+			h1 {
+				font-size: 62px;
+				line-height: 1.05;
+				font-weight: 650;
+				letter-spacing: -0.02em;
+				color: #fff;
+			}
+			h1 span {
+				color: #b5f23d;
+			}
+			p {
+				font-size: 28px;
+				line-height: 1.4;
+				max-width: 600px;
+			}
+			.url {
+				font-family: Mono;
+				font-size: 24px;
+				color: #a1a1aa;
+				margin-top: 10px;
+			}
+			.photo {
+				margin: 48px 64px 48px auto;
+				width: 330px;
+				border-radius: 28px;
+				overflow: hidden;
+				box-shadow: 0 0 0 1px rgb(255 255 255 / 0.1);
+			}
+			.photo img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.icon {
+				display: none;
+			}
+			body.favicon {
+				width: 512px;
+				height: 512px;
+				background: transparent;
+			}
+			body.favicon .og {
+				display: none;
+			}
+			body.favicon .icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 512px;
+				height: 512px;
+				border-radius: 112px;
+				background: #09090b;
+				font-family: Mono;
+				font-weight: 700;
+				font-size: 250px;
+				color: #b5f23d;
+				padding-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="og">
+			<div class="text">
+				<div class="kicker">Boise, Idaho · Developer · Maker</div>
+				<h1>Derek Hearst.<br /><span>I build whatever I want.</span></h1>
+				<p>Software, an electric hydrofoil, a VR game, and a home server full of AI agents.</p>
+				<div class="url">derekhearst.com</div>
+			</div>
+			<div class="photo"><img src="../static/efoil-ride.webp" alt="" /></div>
+		</div>
+		<div class="icon">dh</div>
+		<script>
+			if (location.hash === '#favicon') document.body.classList.add('favicon')
+		</script>
+	</body>
+</html>
