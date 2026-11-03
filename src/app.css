@@ -1,25 +1,22 @@
 @import 'tailwindcss';
-* {
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+@theme {
+	--font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+	--color-accent: oklch(0.87 0.21 128);
+}
+
+html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 5rem;
+	color-scheme: dark;
+	background: var(--color-zinc-950);
 }
 
-::-webkit-scrollbar {
-	width: 10px;
-	background-color: #212121;
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: #4b5563;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background-color: #6b7280;
-}
-
-.dialog {
-	display: flex;
-	align-items: center;
-	&::backdrop {
-		background-color: rgba(0, 0, 0, 0.021);
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
 	}
 }
