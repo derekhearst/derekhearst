@@ -73,13 +73,13 @@
 			tags: ['Svelte 5', 'Tailwind CSS', 'npm'],
 			href: 'https://github.com/derekhearst/SimpleSvelte',
 		},
-		{
-			name: 'eFoil v2',
-			tagline: 'Parametric electric hydrofoil',
-			body: 'A Blender model of a DIY electric hydrofoil that generates its own CNC drawings, cutting patterns, glass ply templates and a fully sourced bill of materials.',
-			tags: ['Blender', 'Python', 'CAD'],
-			href: 'https://github.com/derekhearst/efoil-v2',
-		},
+	]
+
+	const efoilFacts = [
+		{ label: 'Board', value: 'Hand-built foam and fiberglass, 1.6 m' },
+		{ label: 'Battery', value: '2.3 kWh lithium pack I welded myself' },
+		{ label: 'Drive', value: 'VESC motor controller and a 3D-printed prop' },
+		{ label: 'Takeoff', value: '4.2 kW measured from ride logs' },
 	]
 
 	const experience = [
@@ -254,6 +254,47 @@
 		</div>
 	</section>
 
+	<!-- eFoil -->
+	<section id="efoil" class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-[2fr_3fr]">
+		<figure class="flex flex-col gap-3">
+			<img
+				src="/efoil.webp"
+				alt="Derek and his dad carrying his homebuilt eFoil down a boat ramp"
+				width="692"
+				height="919"
+				loading="lazy"
+				class="aspect-[4/5] w-full rounded-2xl object-cover object-bottom ring-1 ring-white/10" />
+			<figcaption class="text-center text-sm text-zinc-500">Carrying V1 down to the water with my dad.</figcaption>
+		</figure>
+		<div class="flex flex-col gap-5">
+			<h2 class="font-mono text-sm tracking-widest text-accent uppercase">Off the keyboard</h2>
+			<p class="text-3xl font-semibold tracking-tight text-white">I built my own electric hydrofoil.</p>
+			<p class="leading-relaxed">
+				An eFoil is a surfboard with an electric motor on a hydrofoil wing, so it lifts off the water and flies a
+				couple of feet above it. My first board is built and riding: I shaped and glassed the board, welded the
+				battery pack, printed the propeller, and tuned the motor controller from my own ride logs.
+			</p>
+			<dl class="grid gap-3 sm:grid-cols-2">
+				{#each efoilFacts as fact (fact.label)}
+					<div class="rounded-xl border border-white/5 bg-zinc-900/60 p-4">
+						<dt class="font-mono text-xs text-zinc-500 uppercase">{fact.label}</dt>
+						<dd class="mt-1 text-sm text-white">{fact.value}</dd>
+					</div>
+				{/each}
+			</dl>
+			<p class="leading-relaxed">
+				Version 2 is designed in code: a parametric Blender model that generates its own CNC drawings, cutting
+				patterns, fiberglass templates and a fully sourced bill of materials. Change one dimension and every
+				document updates with it.
+			</p>
+			<a
+				href="https://github.com/derekhearst/efoil-v2"
+				class="inline-flex items-center gap-2 self-start text-sm text-accent hover:underline">
+				See the V2 model on GitHub <Icon name="external" class="size-4" />
+			</a>
+		</div>
+	</section>
+
 	<!-- Experience and skills -->
 	<section id="experience" class="mx-auto grid max-w-6xl gap-14 px-4 py-20 sm:px-6 lg:grid-cols-[3fr_2fr]">
 		<div>
@@ -298,8 +339,8 @@
 					wanted to do this full time. Boise CodeWorks turned that into web development.
 				</p>
 				<p>
-					Outside work I’m usually building something: a VR submarine game, AI agents that run on my home server, or a
-					DIY electric hydrofoil. I also love ping pong, video games, science fiction, and my cat
+					Outside work I’m usually building something: a VR submarine game, AI agents that run on my home server, or the
+					next version of my eFoil. I also love ping pong, video games, science fiction, and my cat
 					<button
 						type="button"
 						class="cursor-pointer font-semibold text-white underline decoration-accent underline-offset-4"
