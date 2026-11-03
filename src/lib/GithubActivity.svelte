@@ -33,12 +33,9 @@
 		return cols
 	})
 
-	const busiest = $derived(activity?.days.reduce((a, b) => (b.count > a.count ? b : a), activity.days[0]))
 	const last30 = $derived(activity?.days.slice(-30).reduce((sum, d) => sum + d.count, 0) ?? 0)
 
 	const shades = ['bg-white/5', 'bg-accent/25', 'bg-accent/50', 'bg-accent/75', 'bg-accent']
-	const fmt = (date: string) =>
-		new Date(date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })
 
 	// Hover (or tap) a day to see its count. One listener on the grid instead of one per cell.
 	let tip = $state<{ text: string; x: number; y: number } | null>(null)
@@ -79,7 +76,6 @@
 			<p class="text-sm text-zinc-400">
 				<span class="font-mono text-white">{activity.total.toLocaleString()}</span> contributions in the last year ·
 				<span class="font-mono text-white">{last30.toLocaleString()}</span> in the last 30 days
-				{#if busiest}· busiest day <span class="font-mono text-white">{busiest.count}</span> on {fmt(busiest.date)}{/if}
 			</p>
 		{/if}
 	</div>

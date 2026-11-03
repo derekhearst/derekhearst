@@ -5,12 +5,6 @@
 
 	let showSmokey = $state(false)
 
-	const aiStats = [
-		{ value: '2,700+', label: 'commits on my own projects since August' },
-		{ value: '6 weeks', label: 'to 2,400 commits on a co-op VR game, from the very first one' },
-		{ value: '3×', label: 'my monthly output at work since I started using Claude Code' },
-	]
-
 	const efoilThread =
 		'https://foil.zone/t/dereks-first-efoil-build-65161-75200-gong-v2-14s9p-diy-from-boise/26247'
 
@@ -26,7 +20,7 @@
 		{
 			name: 'The Merrow Deep',
 			tagline: 'Co-op VR submarine game',
-			body: 'A 1–4 player co-op VR game in Godot 4 for PCVR. You crew a diesel-electric submarine, hunt convoys and dodge destroyers, and in crew-versus-crew matches each team sees only its own sonar. About 2,400 commits since September, mostly written with Claude agents.',
+			body: 'A 1–4 player co-op VR game in Godot 4 for PCVR. You crew a diesel-electric submarine, hunt convoys and dodge destroyers, and in crew-versus-crew matches each team sees only its own sonar.',
 			tags: ['Godot 4', 'GDScript', 'OpenXR', 'Multiplayer'],
 			status: 'In development',
 		},
@@ -181,21 +175,12 @@
 	<section id="lately" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
 		<h2 class="font-mono text-sm tracking-widest text-accent uppercase">Lately</h2>
 		<p class="mt-2 max-w-3xl text-3xl font-semibold tracking-tight text-balance text-white">
-			I ship a lot, and most of it is on the side.
+			What I’ve been working on
 		</p>
 		<p class="mt-5 max-w-3xl text-lg leading-relaxed">
-			I decide what to build and review and test everything. Claude Code does a lot of the typing.
+			Most of my free time goes into side projects, and this is the running record from GitHub. Claude Code does a lot of the typing these days, while I decide what to build and test everything.
 		</p>
-		<dl class="mt-10 grid gap-4 sm:grid-cols-3">
-			{#each aiStats as stat (stat.label)}
-				<div class="rounded-2xl border border-white/5 bg-zinc-900/60 p-6">
-					<dt class="sr-only">{stat.label}</dt>
-					<dd class="font-mono text-3xl font-semibold text-white">{stat.value}</dd>
-					<dd class="mt-2 text-sm leading-relaxed text-zinc-400">{stat.label}</dd>
-				</div>
-			{/each}
-		</dl>
-		<div class="mt-4">
+		<div class="mt-10">
 			<GithubActivity />
 		</div>
 	</section>
