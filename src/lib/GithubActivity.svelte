@@ -39,7 +39,31 @@
 	const shades = ['bg-white/5', 'bg-accent/25', 'bg-accent/50', 'bg-accent/75', 'bg-accent']
 	const fmt = (date: string) =>
 		new Date(date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })
+
+	// Hover (or tap) a day to see its count. One listener on the grid instead of one per cell.
+	let tip = $state<{ text: string; x: number; y: number } | null>(null)
+
+	function showTip(e: PointerEvent) {
+		const cell = (e.target as HTMLElement).closest<HTMLElement>('[data-date]')
+		if (!cell?.dataset.date) return (tip = null)
+		const count = Number(cell.dataset.count)
+		const day = new Date(cell.dataset.date + 'T00:00:00Z').toLocaleDateString('en-US', {
+			weekday: 'short',
+			month: 'short',
+			day: 'numeric',
+			timeZone: 'UTC',
+		})
+		const rect = cell.getBoundingClientRect()
+		tip = {
+			text: `${count ? count.toLocaleString() : 'No'} contribution${count === 1 ? '' : 's'} on ${day}`,
+			// Keep the ~220px-wide tooltip inside the window near the edges.
+			x: Math.min(Math.max(rect.left + rect.width / 2, 115), window.innerWidth - 115),
+			y: rect.top,
+		}
+	}
 </script>
+
+<svelte:window onscroll={() => (tip = null)} />
 
 <div class="rounded-2xl border border-white/5 bg-zinc-900/60 p-6">
 	<div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
@@ -60,15 +84,22 @@
 		{/if}
 	</div>
 
-	<div class="mt-5 overflow-x-auto pb-1" bind:this={scroller}>
+	<div class="mt-5 overflow-x-auto pb-1" bind:this={scroller} onscroll={() => (tip = null)}>
 		{#if activity}
-			<div class="flex w-max gap-[3px]" role="img" aria-label="Contribution heatmap for the last year">
+			<div
+				class="flex w-max gap-[3px]"
+				role="img"
+				aria-label="Contribution heatmap for the last year"
+				onpointerover={showTip}
+				onpointerdown={showTip}
+				onpointerleave={() => (tip = null)}>
 				{#each weeks as week, w (w)}
 					<div class="flex flex-col gap-[3px]">
 						{#each week as day, d (d)}
 							<span
-								class="size-2.5 rounded-[2px] {day ? shades[day.level] : 'bg-transparent'}"
-								title={day ? `${day.count} on ${fmt(day.date)}` : undefined}></span>
+								class="size-2.5 rounded-[2px] {day ? `${shades[day.level]} hover:ring-1 hover:ring-white/60` : ''}"
+								data-date={day?.date}
+								data-count={day?.count}></span>
 						{/each}
 					</div>
 				{/each}
@@ -85,3 +116,11 @@
 	</div>
 	<p class="mt-3 text-xs text-zinc-500">Includes private work repos. Updated hourly.</p>
 </div>
+
+{#if tip}
+	<div
+		class="pointer-events-none fixed z-30 -translate-x-1/2 -translate-y-full rounded-md bg-zinc-800 px-2.5 py-1.5 text-xs whitespace-nowrap text-white shadow-lg ring-1 ring-white/10"
+		style="left: {tip.x}px; top: {tip.y - 8}px">
+		{tip.text}
+	</div>
+{/if}
