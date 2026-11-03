@@ -6,9 +6,9 @@
 	let showSmokey = $state(false)
 
 	const aiStats = [
-		{ value: '2,700+', label: 'commits on my own projects since August, about 90% written with Claude' },
+		{ value: '2,700+', label: 'commits on my own projects since August' },
 		{ value: '6 weeks', label: 'to 2,400 commits on a co-op VR game, from the very first one' },
-		{ value: '3×', label: 'my monthly output at work after adopting Claude Code' },
+		{ value: '3×', label: 'my monthly output at work since I started using Claude Code' },
 	]
 
 	const efoilThread =
@@ -71,7 +71,7 @@
 	<title>Derek Hearst</title>
 	<meta
 		name="description"
-		content="Derek Hearst is a developer and maker in Boise, Idaho who builds whatever he wants: software, an electric hydrofoil, a VR game and AI agents, with AI multiplying his output." />
+		content="Derek Hearst is a developer and maker in Boise, Idaho who builds whatever he wants: software, an electric hydrofoil, a VR game and AI agents." />
 	<meta property="og:title" content="Derek Hearst" />
 	<meta property="og:description" content="I build whatever I want: software, an electric hydrofoil, a VR game, and a home server full of AI agents." />
 	<meta property="og:image" content="https://derekhearst.com/og.png" />
@@ -99,8 +99,7 @@
 				</h1>
 				<p class="max-w-2xl text-xl text-pretty">
 					If I want something to exist, I figure out how to make it: software, an electric hydrofoil, a VR game, a home
-					server full of AI agents. AI is the best tool I’ve ever had for it, because it lets one person build like a
-					whole team.
+					server full of AI agents.
 				</p>
 				<div class="flex flex-wrap gap-3">
 					<a
@@ -178,16 +177,14 @@
 		</div>
 	</section>
 
-	<!-- AI -->
-	<section id="ai" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-		<h2 class="font-mono text-sm tracking-widest text-accent uppercase">Building with AI</h2>
+	<!-- Lately -->
+	<section id="lately" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+		<h2 class="font-mono text-sm tracking-widest text-accent uppercase">Lately</h2>
 		<p class="mt-2 max-w-3xl text-3xl font-semibold tracking-tight text-balance text-white">
-			AI turned my side projects from someday into this weekend.
+			I ship a lot, and most of it is on the side.
 		</p>
 		<p class="mt-5 max-w-3xl text-lg leading-relaxed">
-			I love AI because it multiplies what one person can make. I decide what to build, set the direction, and review
-			and test everything. Claude agents do a lot of the typing, often on my home server while I’m doing something
-			else. It means I can chase every idea instead of picking one.
+			I decide what to build and review and test everything. Claude Code does a lot of the typing.
 		</p>
 		<dl class="mt-10 grid gap-4 sm:grid-cols-3">
 			{#each aiStats as stat (stat.label)}

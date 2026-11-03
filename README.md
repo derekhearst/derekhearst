@@ -3,8 +3,6 @@
 
 I'm a developer and maker in Boise, Idaho. By day I'm the lead web developer at Brown & Root Industrial Services, building the internal apps a 10,000-person company runs on. The rest of the time I build whatever I want: a homebuilt electric hydrofoil, a co-op VR submarine game, and a home server full of AI agents.
 
-I love AI because it multiplies what one person can make. Most of what I build now is written with Claude Code and Claude agents, with me setting the direction and reviewing and testing everything.
-
 #### What I'm building
 
 - [**efoil-v2**](https://github.com/derekhearst/efoil-v2) · a parametric Blender model of my eFoil that generates its own CNC drawings and bill of materials. V1 is built and riding ([build log](https://foil.zone/t/dereks-first-efoil-build-65161-75200-gong-v2-14s9p-diy-from-boise/26247)).
