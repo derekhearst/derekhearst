@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Icon from '#lib/Icon.svelte'
 	import EfoilModel from '#lib/EfoilModel.svelte'
+	import GithubActivity from '#lib/GithubActivity.svelte'
 
 	let showSmokey = $state(false)
 
@@ -197,6 +198,9 @@
 				</div>
 			{/each}
 		</dl>
+		<div class="mt-4">
+			<GithubActivity />
+		</div>
 	</section>
 
 	<!-- eFoil -->
